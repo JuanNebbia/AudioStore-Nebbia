@@ -1,0 +1,36 @@
+nav{
+    background-color: #333333;
+    display: flex;
+}
+
+h1{
+    color: #d8c5aa;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.verticalLine {
+    border-left: thick solid #555;
+}
+
+ul{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul > li {
+    list-style: none;
+    margin-left: 0.8rem;
+}
+
+li > a {
+    text-decoration: none;
+    color: #d8c5aa;
+    font-size: 1.3rem;
+}
+
+li > a:hover{
+    color: #fed;
+}
