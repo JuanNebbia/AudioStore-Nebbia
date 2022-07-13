@@ -1,22 +1,5 @@
 import './Navbar.css'
 
-const Navbar2 = () =>{
-    return (
-        <nav>
-            <img src='/icon.png' alt='logo' className='logo-navbar' />
-            <h1 id="titulo">AudioStore</h1>
-            <div class="verticalLine"></div>
-            <ul>
-                <li><a href="#titulo">Descubre</a></li>
-                <li><a href="#titulo">Sube tu contenido</a></li>
-                <li><a href="#titulo">Sobre Nosotros</a></li>
-                <li><a href="#titulo">Contacto</a></li>
-            </ul>
-        </nav>
-        
-    );
-}
-
 const Navbar = () =>{
     return (
         <nav class="navbar navbar-expand-lg">
