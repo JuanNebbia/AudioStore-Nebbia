@@ -1,0 +1,18 @@
+.cart{
+    background-color: #222;
+    padding: 0.7rem;
+    border-radius: 50%;
+}
+
+.cart:hover{
+    background-color: #2a2a2a;
+    box-shadow: 0 0 2px black;
+    padding: 0.75rem;
+    margin-right: -0.05rem;
+}
+
+.cart:active{
+    padding: 0.7rem;
+    margin-right: 0.05rem;
+    box-shadow: none;
+}

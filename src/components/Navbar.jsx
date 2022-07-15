@@ -1,4 +1,5 @@
 import './Navbar.css'
+import CartWidget from './CartWidget'
 
 const Navbar = () =>{
     return (
@@ -28,12 +29,8 @@ const Navbar = () =>{
                     <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
                     </li>
-
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Artistas, géneros..." aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
+                <CartWidget />
                 </div>
             </div>
         </nav>

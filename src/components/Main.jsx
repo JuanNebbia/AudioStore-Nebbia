@@ -3,7 +3,7 @@ import './Main.css'
 const Main = () =>{
     return (
         <main>
-            <h2>Contenido principal</h2>
+            <p>(este componente lo dejo por acá por si sirve más adelante)</p>
         </main>
     );
 }

@@ -1,15 +1,20 @@
 .navbar{
     background-color: #3a3a3a;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .logo-navbar{
-    height: 4.5rem;
+    height: 3.7rem;
+    margin-right: 0.8rem;
+    margin-top: -0.5rem;
 }
 
 .navbar-brand{
     font-size: 1.6rem;
     font-weight: bold;
-    color: #ffeecc;
+    text-shadow: 0 0 4px black;
+    color: #be2a8d;
 }
 
 .nav-item > a{
