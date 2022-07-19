@@ -1,0 +1,52 @@
+.contador-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-resta{
+    padding: 15px;
+    width: 100px;
+    height: 100%;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.btn-resta:active{
+    background-color: #111;
+}
+
+.btn-suma{
+    padding: 15px;
+    width: 100px;
+    height: 100%;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.btn-suma:active{
+    background-color: #111;
+}
+
+.contador{
+    padding: 15px 3rem;
+    background-color: rgb(21, 135, 206);
+    height: 100%;
+    color: #000;
+    font-size: 2rem;
+}
+
+#stock-max, #stock-min{
+    color:rgb(255, 0, 0);
+    font-size: 2rem;
+    display: none;
+    text-align: center;
+}
+

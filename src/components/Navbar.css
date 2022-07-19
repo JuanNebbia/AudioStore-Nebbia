@@ -2,6 +2,7 @@
     background-color: #3a3a3a;
     padding-left: 10%;
     padding-right: 10%;
+    box-shadow: 0 2px 3px black;
 }
 
 .logo-navbar{
@@ -21,6 +22,7 @@
     color: #d8c5aa;
     font-size: 1.2rem;
     border-radius: 0.3rem;
+    padding: 0.5rem;
 }
 
 .nav-item > a:hover{
@@ -40,4 +42,8 @@
 
 .form-control{
     width: fit-content;
+}
+
+.navbar-toggler{
+    background-color: #d8c5aa;
 }

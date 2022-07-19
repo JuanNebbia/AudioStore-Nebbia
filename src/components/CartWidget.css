@@ -13,6 +13,6 @@
 
 .cart:active{
     padding: 0.7rem;
-    margin-right: 0.05rem;
+    margin-right: 0.025rem;
     box-shadow: none;
 }
