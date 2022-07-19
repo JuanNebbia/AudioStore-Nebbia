@@ -26,14 +26,16 @@ const ItemCount = ({ stock, initial }) =>{
 
 
     return(
-        <div>
+        <div className="item-count-container">
             <div className='contador-container'>
                 <button onClick={restar} className='btn-resta'>-</button>
                 <p className='contador'>{cantidad}</p>
                 <button onClick={sumar} className='btn-suma'>+</button>
             </div>
-            <p id="stock-min">¡No puedes seleccionar menos de un producto!</p>
-            <p id="stock-max">¡Stock máximo del producto!</p>
+            <div className="warnings">
+                <p id="stock-min">¡No puedes seleccionar menos de un producto!</p>
+                <p id="stock-max">¡Stock máximo del producto!</p>
+            </div>
         </div>
     )
 }
