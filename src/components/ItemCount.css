@@ -44,12 +44,12 @@
 }
 
 
-.warnings{
+.warning-container{
     display: flex;
     justify-content: center;
 }
 
-#stock-max, #stock-min{
+.warning{
     color:#d33;
     background-color: #111;
     width: fit-content;
