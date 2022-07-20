@@ -43,6 +43,7 @@
     font-size: 2rem;
 }
 
+
 .warnings{
     display: flex;
     justify-content: center;
@@ -50,11 +51,22 @@
 
 #stock-max, #stock-min{
     color:#d33;
-    display: none;
     background-color: #111;
     width: fit-content;
+    height: 1.7rem;
     padding: 5px;
     border-radius: 5px;
     font-size: 0.8rem;
+    margin-bottom: -1.7rem;
 }
 
+.btn-comprar-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-success{
+    margin: 2.5rem;
+    font-size: 2rem;
+    padding: 1rem;
+}

@@ -1,26 +1,22 @@
 import { useState } from "react"
 import './ItemCount.css'
 
-const ItemCount = ({ stock, initial }) =>{
+const ItemCount = ({ stock, initial, onAdd}) =>{
     const [cantidad, setCantidad] = useState(initial)
-    const minWarn = document.getElementById("stock-min")
-    const maxWarn = document.getElementById("stock-max")
+    const [minimo, setMinimo] = useState(false)
 
     const sumar = () =>{
+        setMinimo(false)
         if (cantidad < stock){
             setCantidad(cantidad + 1)
-            minWarn.setAttribute('style', 'display:none')
-        }else{
-            maxWarn.setAttribute('style', 'display:block')
         }
     }
 
     const restar = () =>{
         if (cantidad > 1){
             setCantidad(cantidad - 1)
-            maxWarn.setAttribute('style', 'display:none')
         }else{
-            minWarn.setAttribute('style', 'display:block')
+            setMinimo(true)
         }
      }
 
@@ -33,8 +29,11 @@ const ItemCount = ({ stock, initial }) =>{
                 <button onClick={sumar} className='btn-suma'>+</button>
             </div>
             <div className="warnings">
-                <p id="stock-min">¡No puedes seleccionar menos de un producto!</p>
-                <p id="stock-max">¡Stock máximo del producto!</p>
+                {minimo && <p id="stock-min">¡No puedes seleccionar menos de un producto!</p>}
+                {cantidad === stock && <p id="stock-max">¡Stock máximo del producto!</p>}
+            </div>
+            <div className="btn-comprar-container">
+                <button onClick={()=>{onAdd(cantidad); setMinimo(false)}} className='btn btn-success'>Comprar</button>
             </div>
         </div>
     )
