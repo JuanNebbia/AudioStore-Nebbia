@@ -1,0 +1,10 @@
+.greeting{
+    padding: 5rem 0;
+    text-align: center;
+    color: #939;
+    font-size: 2rem;
+}
+
+.item-list-container{
+  background-color: #ddd;
+}
