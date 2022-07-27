@@ -1,0 +1,65 @@
+.item-detail-container{
+    margin: 10rem;
+}
+
+.content{
+    background-color: #000c;
+    padding: 5rem;
+}
+
+.detail-title{
+    text-align: center;
+    font-weight: 100;
+    font-size: 3rem;
+    color: #eee;
+    text-shadow: 1px 1px 5px black;
+}
+
+.detail-title span{
+    font-weight: bold;
+}
+
+.detail-artist{
+    text-align: center;
+    color: #eee;
+
+}
+
+.description{
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: #bdf7;
+    padding: 5%;
+    border-radius: 2rem;
+}
+
+.description-text{
+    text-align: center;
+    color: #111;
+}
+
+.track-list{
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbd7;
+    padding: 5%;
+    border-radius: 2rem;
+}
+
+h6{
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.price-tag{
+    font-size: 3rem;
+    text-align: center;
+    background-color: #9999;
+    color: #fff;
+    width: 100%;
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem auto;
+}

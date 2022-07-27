@@ -1,3 +1,14 @@
+export const getItem = new Promise((resolve) => {
+    setTimeout(()=> {
+        resolve(fetch('https://62e16660e8ad6b66d848fbe1.mockapi.io/api/products')
+        .then((res) => res.json())
+        )},2000)
+    
+})
+
+/*
+    //ASÍ LO HACÍA ANTES DE UTILIZAR MOCKAPI. LO DEJO PORLAS
+
 const productsList = [
     { id:'01', title:'Tango beat', artist:'Milonga Piacompañada', genres:['tango', 'electronico'], pictureUrl: 'https://ardea.unvm.edu.ar/wp-content/uploads/2020/10/tango-electronico-01.jpg', price: '250' },
     { id:'02', title:'Preludio para vientos madera', artist:'György Ligeti', genres:['contemporáneo', 'música de cámara'], pictureUrl: 'https://as2.ftcdn.net/v2/jpg/03/77/99/75/1000_F_377997566_s1MMD3TAgPn2mlVqy0kTPtFG2MNYJeR2.jpg', price: '350' },
@@ -20,3 +31,6 @@ export const data = new Promise((resolve, reject) =>{
         }
     }, 2000)
 })
+*/
+
+
