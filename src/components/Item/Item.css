@@ -1,6 +1,7 @@
 .card{
     width: 18rem;
     height: fit-content;
+    min-height: 22rem;
     transition: scale, 0.2s;
     display: flex;
     margin-top: 3rem;
@@ -34,8 +35,10 @@
     color: #555;
 }
 
-.card-footer{
-    background-color: transparent;
+.card-body{
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 p.card-img-overlay{
@@ -63,4 +66,22 @@ p.card-img-overlay{
 
 .btn-primary{
     width: 100%;
+    margin-top: 0;
+}
+
+.card-footer{
+    background-color: transparent;
+    font-size: 0.8rem;
+    margin-top: auto;
+}
+
+.text-footer{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.length{
+    color: #000;
+    font-weight: 500
 }

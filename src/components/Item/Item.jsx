@@ -3,20 +3,25 @@ import './Item.css'
 import { Link } from 'react-router-dom'
 
 const Item = ({ product }) => {
+  const {title, artist, genres, pictureUrl, price, description, stock, tracks, id} = product
+
+
   return (
     <div className="card mb-3">
       <div className='img-container'>
-        <img src={product.pictureUrl} className="card-img-top" alt={product.title} />
-        <p className='card-img-overlay'>${product.price}</p>
+        <img src={pictureUrl} className="card-img-top" alt={title} />
+        <p className='card-img-overlay'>${price}</p>
       </div>
       <div className="card-body">
-        <h5 className="card-title">{product.title}</h5>
-        <p className="card-text">{product.artist}</p>
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{artist}</p>
         <div className="card-footer">
-          {product.genres.map((genre, i)=><span key={i} className='text-muted'>{genre} / </span>)}
+          <p className='text-muted text-footer'>Este producto incluye 
+            <span className='length'> {tracks.length}</span> {tracks.length == 1 ? 'pista' : 'pistas'}
+          </p>
         </div>
       </div>
-      <Link to={`/detail/${product.id}`}>
+      <Link to={`/detail/${id}`}>
         <button className='btn btn-primary'>Ver detalles</button>
       </Link>
     </div>

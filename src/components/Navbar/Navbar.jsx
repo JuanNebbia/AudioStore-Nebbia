@@ -19,19 +19,27 @@ const Navbar = () =>{
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <Link className="nav-link active" to={'/'}>Inicio</Link>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Géneros
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><Link class="dropdown-item" to={'/category/contemporáneo'}>Contemporáneo</Link></li>
+                            <li><Link class="dropdown-item" to={'/category/tango'}>Tango</Link></li>
+                            <li><Link class="dropdown-item" to={'/category/piano'}>Piano</Link></li>
+                            <li><Link class="dropdown-item" to={'/category/ambiental'}>Ambiental</Link></li>
+                            <li><Link class="dropdown-item" to={'/category/experimental'}>Experimental</Link></li>
+                            <li><Link class="dropdown-item" to={'/category/clásico'}>Clásico</Link></li>
+                            <li><Link class="dropdown-item" to={'/category/ópera'}>Ópera</Link></li>
+                        </ul>
+                        </li>
+                    <li className="nav-item">
+                        <Link className="nav-link active" to={'/'}>Sobre Nosotros</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Descubre</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Publica</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Sobre nosotros</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Contacto</a>
+                        <Link className="nav-link active" to={'/'}>Contacto</Link>
                     </li>
                 </ul>
                 </div>

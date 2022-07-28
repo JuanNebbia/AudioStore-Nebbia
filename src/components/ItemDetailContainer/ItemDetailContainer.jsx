@@ -15,12 +15,11 @@ const ItemDetailContainer = () => {
         .then(console.log(productDetail))
         .catch((err)=> console.log(err))
         .finally(setLoading(false))
-    },[])
+    },[itemId])
 
     return (
         <>
-            <ItemDetail productDetail = {productDetail}/>
-            {loading && <p>Cargando...</p>}
+          {loading? <h3>Cargando...</h3> : <ItemDetail productDetail = {productDetail}/> }
         </>
   )
 }
