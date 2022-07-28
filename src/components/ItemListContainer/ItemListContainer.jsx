@@ -1,12 +1,10 @@
 import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount'
 import ItemList from '../ItemList/ItemList'
 import { useEffect, useState } from 'react'
 import { getItem } from '../../mock/data'
 
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
-    const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{

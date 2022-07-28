@@ -30,7 +30,7 @@ const ItemCount = ({ stock, initial, onAdd}) =>{
             </div>
             <div className="warning-container">
                 {minimo && <p className="warning">¡No puedes seleccionar menos de un producto!</p>}
-                {cantidad === stock && <p className="warning">¡Stock máximo del producto!</p>}
+                {cantidad === stock && <p className="stock">¡Stock máximo del producto!</p>}
                 {stock === 0 && <p className="warning">Este producto se encuentra agotado</p> }
             </div>
             <div className="btn-comprar-container">

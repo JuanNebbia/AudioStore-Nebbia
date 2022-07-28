@@ -1,5 +1,6 @@
 import React from 'react'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 const Item = ({ product }) => {
   return (
@@ -15,7 +16,9 @@ const Item = ({ product }) => {
           {product.genres.map((genre, i)=><span key={i} className='text-muted'>{genre} / </span>)}
         </div>
       </div>
-      <button className='btn btn-primary'>Ver detalles</button>
+      <Link to={`/detail/${product.id}`}>
+        <button className='btn btn-primary'>Ver detalles</button>
+      </Link>
     </div>
   )
 }

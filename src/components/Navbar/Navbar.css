@@ -1,8 +1,6 @@
 .navbar{
     background-color: #3a3a3a;
-    padding-left: 10%;
-    padding-right: 10%;
-    box-shadow: 0 2px 3px black;
+    padding: 1.5rem 10%;
 }
 
 .logo-navbar{
@@ -11,10 +9,14 @@
     margin-top: -0.5rem;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .navbar-brand{
     font-size: 1.6rem;
     font-weight: bold;
-    text-shadow: 0 0 4px black;
+    text-shadow: 0 0 2px black;
     color: #be2a8d;
 }
 
