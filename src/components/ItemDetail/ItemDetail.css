@@ -16,13 +16,14 @@
 .detail-title{
     text-align: center;
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #eee;
     text-shadow: 1px 1px 5px black;
 }
 
 .detail-title span{
     font-weight: bold;
+    font-size: 2rem;
 }
 
 .detail-artist{
@@ -75,14 +76,12 @@ h6{
 }
 
 .price-tag{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     background-color: #999a;
     color: #fff;
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-}
-
-.price-tag-container{
-    padding: 0 2.75rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 17rem;
+    margin: 1rem auto;
 }

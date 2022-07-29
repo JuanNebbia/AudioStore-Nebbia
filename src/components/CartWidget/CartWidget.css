@@ -1,18 +1,24 @@
-.cart{
-    background-color: #222;
-    padding: 0.7rem;
+.cart-container{
     border-radius: 50%;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
 }
 
-.cart:hover{
-    background-color: #2a2a2a;
+.cart-anchor{
+    margin: auto;
+}
+
+.cart-img{
+    height: 1.7rem;
+}
+
+.cart-container:hover{
+    background-color: #555;
     box-shadow: 0 0 2px black;
-    padding: 0.75rem;
-    margin-right: -0.05rem;
 }
 
-.cart:active{
-    padding: 0.7rem;
-    margin-right: 0.025rem;
+.cart-container:active{
     box-shadow: none;
+    transform: scale(0.97);
 }

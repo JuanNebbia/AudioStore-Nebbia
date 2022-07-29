@@ -16,7 +16,7 @@
 }
 
 .card-img-top{
-    filter: brightness(0.5);
+    filter: brightness(0.5) grayscale(0.6);
     transition: filter, 0.2s;
     object-fit: cover;
     height: 100%;
@@ -52,11 +52,11 @@ p.card-img-overlay{
 }
 
 .card:hover {
-    box-shadow: 0 0 8px #444;
+    box-shadow: 0 0 8px #555;
 }
 
 .card:hover .card-img-top {
-    filter: brightness(1);
+    filter: brightness(1) grayscale(0);
 }
 
 .card:hover .card-img-overlay{

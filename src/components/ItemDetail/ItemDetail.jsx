@@ -36,9 +36,7 @@ const ItemDetail = ({ productDetail }) => {
                     </div>
                 </div>
             </div>
-            <div className="row price-tag-container">
                 <p className='col-12 price-tag'>${price}</p>
-            </div>
             <ItemCount
                 initial = {1}
                 stock = {stock}

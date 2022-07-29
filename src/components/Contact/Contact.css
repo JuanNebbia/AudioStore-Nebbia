@@ -1,0 +1,27 @@
+.contact{
+    background-image: url(../../background.jpg);
+    background-size: cover;
+    height: 100vh;
+    padding: 5rem;
+}
+
+.contact-title{
+    color: #fce5b0;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contact-content{
+    background-color: #000c;
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contact-text{
+    color: #fce5b0;
+    margin: 1rem;
+}
