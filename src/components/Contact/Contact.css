@@ -1,8 +1,13 @@
-.contact{
-    background-image: url(../../background.jpg);
-    background-size: cover;
-    height: 100vh;
-    padding: 5rem;
+.contact-background{
+    position: absolute;
+    filter: brightness(0.5) grayscale(0.3);
+    object-fit: cover;
+    width: 100vw;
+}
+
+.contact-card{
+    position: relative;
+    padding: 4rem;
 }
 
 .contact-title{
@@ -10,6 +15,7 @@
     text-align: center;
     font-size: 3rem;
     margin-bottom: 3rem;
+    text-shadow: 0 0 5px black;
 }
 
 .contact-content{
@@ -18,10 +24,23 @@
     padding: 3rem;
     flex-direction: column;
     align-items: center;
-
 }
 
-.contact-text{
-    color: #fce5b0;
-    margin: 1rem;
+.contact-net{
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: bold;
+    color: #dd8b00;
 }
+
+.contact-link{
+    color: #bbb;
+    margin-bottom: 2.5rem;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.contact-link:hover{
+    color: #fff;
+}
+

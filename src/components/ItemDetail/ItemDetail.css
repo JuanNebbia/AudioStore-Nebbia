@@ -10,7 +10,7 @@
 
 .titles{
     padding: 2rem;
-    background-color: #000a;
+    background-color: #000d;
 }
 
 .detail-title{
@@ -44,44 +44,71 @@
 .description{
     display: flex;
     flex-direction: column;
-    background-color: #cefa;
+    background-color: #fe3b63aa;
     padding: 1.5rem;
     border-radius: 1rem;
     min-height: 15rem;
+    margin-bottom: 1rem;
 }
 
 .description-text{
     text-align: center;
-    color: #111;
+    color: #000;
     margin-top: 1rem;
+    font-weight: 500;
 }
 
 .track-list{
     display: flex;
     flex-direction: column;
-    background-color: #efca;
+    background-color: #449ea9aa;
     padding: 1.5rem;
     border-radius: 1rem;
     min-height: 15rem;
 }
 
 .track-list > ol{
-    margin-top: 1rem;
+    margin: 1rem;
     font-weight: 500;
+    padding: 0;
+}
+
+.track-item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: #121212;
+}
+
+.track-duration{
+    font-size: 0.9rem;
+    color: #222;
 }
 
 h6{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #000;
+    font-weight: 600;
 }
 
 .price-tag{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
-    background-color: #999a;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 10px;
-    width: 17rem;
+    color: #eee;
+    text-shadow: -1px 1px 5px black;
     margin: 1rem auto;
+    font-weight: bold;
 }
+
+.no-demo{
+    background-color: #000e;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.no-demo-text{
+    color: #fff;
+    margin: 0;
+}
+

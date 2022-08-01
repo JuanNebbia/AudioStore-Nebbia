@@ -1,5 +1,5 @@
 import './Navbar.css'
-import Logo from '../../logo.png'
+import Logo from '../../img/logo.png'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
 
@@ -34,6 +34,7 @@ const Navbar = () =>{
                             <li><Link class="dropdown-item" to={'/category/minimalista'}>Minimalista</Link></li>
                             <li><Link class="dropdown-item" to={'/category/clásico'}>Clásico</Link></li>
                             <li><Link class="dropdown-item" to={'/category/ópera'}>Ópera</Link></li>
+                            <li><Link class="dropdown-item" to={'/category/acustico'}>Acústico</Link></li>
                         </ul>
                         </li>
                     <li className="nav-item">

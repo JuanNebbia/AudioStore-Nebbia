@@ -13,6 +13,8 @@
     background-color: #2a2a2a;
     color: #fff;
     font-size: 2rem;
+    box-shadow: -1px 0 2px #111;
+    z-index: 10;
 }
 
 .btn-resta:active{
@@ -29,7 +31,12 @@
     background-color: #2a2a2a;
     color: #fff;
     font-size: 2rem;
+    box-shadow: 1px 0 2px #111;
+    z-index: 10;
 }
+
+
+
 
 .btn-suma:active{
     background-color: #111;
@@ -37,10 +44,12 @@
 
 .contador{
     padding: 10px 3rem;
-    background-color: rgb(21, 135, 206);
+    background-color: rgb(37, 170, 253);
     height: 100%;
     color: #000;
     font-size: 2rem;
+    font-weight: 600;
+    box-shadow: 0 0 2px #111;
 }
 
 
@@ -74,4 +83,9 @@
     margin: 1.5rem;
     font-size: 1.3rem;
     padding: 1rem;
+    background-color: rgb(5, 141, 32);
+    border: 2px solid rgb(1, 17, 4);
+    color: #fff;
+    border-radius: 10px;
 }
+

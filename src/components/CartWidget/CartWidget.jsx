@@ -1,5 +1,5 @@
 import './CartWidget.css'
-import Cart from '../../cart.png'
+import Cart from '../../img/cart.png'
 import { Link } from 'react-router-dom';
 
 const CartWidget = () =>{

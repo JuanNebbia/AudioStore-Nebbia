@@ -1,7 +1,6 @@
 import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 import { useEffect, useState } from 'react'
-import { getItem } from '../../mock/data'
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = (props) => {
@@ -10,7 +9,8 @@ const ItemListContainer = (props) => {
     const { categoryId } = useParams()
 
     useEffect(()=>{
-        getItem
+        fetch('https://62e16660e8ad6b66d848fbe1.mockapi.io/api/products')
+        .then((res) => res.json())
         .then((data)=> {
             if (!categoryId){
                 setProducts(data)
@@ -18,7 +18,6 @@ const ItemListContainer = (props) => {
                 setProducts(data.filter((item)=>item.genres.includes(categoryId)))
             }
         })  
-        .then(console.log(products))
         .catch((err)=> console.log(err))
         .finally(setLoading(false))
     }, [categoryId])
