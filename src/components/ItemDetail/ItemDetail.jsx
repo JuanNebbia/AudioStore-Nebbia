@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import Demo from '../Demo/Demo'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
@@ -7,13 +7,19 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
 const ItemDetail = ({ productDetail }) => {
     const {title, artist, genres, pictureUrl, price, description, stock, tracks, demo, id} = productDetail
+    const [compra, setCompra] = useState(false)
+    const [count, setCount] = useState(1)
+    const navigate = useNavigate()
 
-    const onAdd = (cantidad) =>{
-        if (cantidad > 1){
-            alert (`usted ha comprado ${cantidad} productos`)
+    const onAdd = (quantityToAdd) =>{
+        if (quantityToAdd > 1){
+            alert(`Se han agregado ${quantityToAdd} items al carrito`)
         } else{
-            alert (`usted ha comprado ${cantidad} producto`)
+            alert(`Se ha agregado 1 item al carrito`)
         }
+        setCount(quantityToAdd)
+        setCompra(true)
+
     }
 
   return (
@@ -26,12 +32,12 @@ const ItemDetail = ({ productDetail }) => {
             <div className="row">
                 <div className="col-lg-6">
                     <div className="detail-img-container">
-                        <img src={pictureUrl} alt="" className="detail-img" /> 
+                        <img src={pictureUrl} alt={title} title={title} className="detail-img" /> 
                     </div>
                 </div>
                 <div className="col-lg-6 titles">
                     <div className="genres-container">
-                        {genres?.map((genre)=><Link to={`/category/${genre}`} className="genres">{genre}</Link>)}
+                        {genres?.map((genre, i)=><Link to={`/category/${genre}`} className="genres" key={i}>{genre}</Link>)}
                     </div>
                     <h4 className='detail-title'>{title}</h4>
                     <h5 className='detail-artist'>{artist}</h5>
@@ -51,10 +57,15 @@ const ItemDetail = ({ productDetail }) => {
                         </ol>
                     </div>
                     <div className="col-lg-6 buy-section">
-                        <ItemCount
-                            initial = {1}
+                        {compra? 
+                            <div className='btn-cart-container'>
+                                <button className="btn btn-keep" onClick={()=>navigate('/')}>Seguir comprando</button>
+                                <button className="btn btn-cart" onClick={()=>navigate('./cart')}>Ver carrito</button>
+                            </div>
+                        : <ItemCount
                             stock = {stock}
-                            onAdd = {onAdd} />
+                            onAdd = {onAdd} 
+                        />}
                     </div>
                 </div>
             </div>

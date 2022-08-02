@@ -1,9 +1,8 @@
-import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
@@ -24,7 +23,6 @@ const ItemListContainer = (props) => {
 
     return (
         <div className='item-list-container'>
-            <h3 className="greeting">{props.greeting}</h3>
             {loading ? <h3>Cargando productos</h3> : <ItemList items = {products} />}
         </div>
     )

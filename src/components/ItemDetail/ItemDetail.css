@@ -139,6 +139,31 @@ h6{
     font-size: 1.3rem;
 }
 
+.btn-cart-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-cart{
+    font-size: 1rem;
+    padding:0.5rem;
+    background-color: #e72;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    width: 47%;
+}
+
+.btn-keep{
+    font-size: 1rem;
+    padding:0.5rem;
+    background-color: #2a5;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    width: 47%;
+}
+
 .demo{
     width: 100%;
 }

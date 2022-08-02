@@ -1,8 +1,9 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import './ItemCount.css'
 
-const ItemCount = ({ stock, initial, onAdd}) =>{
-    const [cantidad, setCantidad] = useState(initial)
+const ItemCount = ({ stock, onAdd}) =>{
+    const [cantidad, setCantidad] = useState(1)
 
     const sumar = () =>{
         if (cantidad < stock){
@@ -20,11 +21,9 @@ const ItemCount = ({ stock, initial, onAdd}) =>{
     return(
         <div className="item-count-container">
             <div className='contador-container'>
-                {cantidad > 1 ?
-                <button onClick={restar} className='btn-resta'>-</button> :
-                <button onClick={restar} className='btn-resta-disabled'>-</button>}
+                <button onClick={restar} disabled={cantidad<=1} className='btn-resta'>-</button>
                 <p className='contador'>{stock > 0 ? cantidad : '0'}</p>
-                <button onClick={sumar} className='btn-suma'>+</button>
+                <button onClick={sumar} disabled={cantidad>=stock} className='btn-suma'>+</button>
             </div>
             <div className="warning-container">
                 {cantidad === stock && <p className="stock">¡Stock máximo del producto!</p>}
@@ -33,7 +32,8 @@ const ItemCount = ({ stock, initial, onAdd}) =>{
             <div className="btn-comprar-container">
                 <button 
                     onClick={()=>{onAdd(cantidad)}} 
-                    className={stock > 0 ? 'btn btn-add' : 'btn btn-add disabled'}>
+                    className='btn btn-add'
+                    disabled={stock === 0}>
                     Agregar al carrito
                 </button>
             </div>
