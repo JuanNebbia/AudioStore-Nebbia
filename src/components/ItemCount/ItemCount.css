@@ -1,77 +1,90 @@
 .contador-container{
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
 }
 
 .btn-resta{
-    padding: 10px;
-    width: 80px;
-    height: 100%;
-    border: none;
+    width: 3.2rem;
+    height: 3rem;
+    border: 2px solid #444;
+    border-right: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: #2a2a2a;
-    color: #fff;
-    font-size: 2rem;
-    box-shadow: -1px 0 2px #111;
+    background-color: transparent;
+    color: #333;
+    font-size: 1.5rem;
     z-index: 10;
 }
 
 .btn-resta:active{
-    background-color: #111;
+    background-color: #aaa;
 }
 
-.btn-suma{
-    padding: 10px;
-    width: 80px;
-    height: 100%;
-    border: none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #2a2a2a;
-    color: #fff;
-    font-size: 2rem;
-    box-shadow: 1px 0 2px #111;
+.btn-resta-disabled{
+    width: 3.2rem;
+    height: 3rem;
+    border: 2px solid #444;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: transparent;
+    color: #888;
+    font-size: 1.5rem;
     z-index: 10;
 }
 
-
-
-
-.btn-suma:active{
-    background-color: #111;
+.btn-resta-disabled:focus{
+    cursor:default;
 }
 
+.btn-suma{
+    width: 3.2rem;
+    height: 3rem;
+    border: 2px solid #444;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: transparent;
+    color: #333;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.btn-suma:active{
+    background-color: #aaa;
+}
+
+
 .contador{
-    padding: 10px 3rem;
-    background-color: rgb(37, 170, 253);
-    height: 100%;
-    color: #000;
-    font-size: 2rem;
-    font-weight: 600;
-    box-shadow: 0 0 2px #111;
+    background-color: transparent;
+    width: 3rem;
+    height: 3rem;
+    color: #111;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-top: 2px solid #444;
+    border-bottom: 2px solid #444;
+    text-align: center;
 }
 
 
 .warning-container{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
 }
 
 .warning, .stock{
-    color:#d33;
-    background-color: #000;
+    color: #000;
+    background-color: #d33;
     width: fit-content;
     height: 1.7rem;
     padding: 5px;
     border-radius: 5px;
     font-size: 0.8rem;
-    margin-bottom: -1.7rem;
-    margin-top: -0.5rem;
 }
 
 .stock{
-    color: #44f;
+    background-color: #44e;
+    margin-left: 1rem;
 }
 
 .btn-comprar-container{
@@ -79,13 +92,13 @@
     justify-content: center;
 }
 
-.btn-success{
-    margin: 1.5rem;
-    font-size: 1.3rem;
-    padding: 1rem;
-    background-color: rgb(5, 141, 32);
-    border: 2px solid rgb(1, 17, 4);
+.btn-add{
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #74b;
+    border: none;
     color: #fff;
     border-radius: 10px;
+    width: 100%;
 }
 

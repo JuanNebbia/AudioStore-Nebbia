@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Demo from '../Demo/Demo'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
 const ItemDetail = ({ productDetail }) => {
     const {title, artist, genres, pictureUrl, price, description, stock, tracks, demo, id} = productDetail
@@ -15,29 +17,41 @@ const ItemDetail = ({ productDetail }) => {
     }
 
   return (
-    <div className='item-detail-container' style={{backgroundImage: `url(${pictureUrl})`, backgroundSize: "cover"}}>
-        <div className='content'>
-            <div className="titles">
-                <h4 className='detail-title'>Detalle del producto: <span>{title}</span></h4>
-                <h5 className='detail-artist'>{artist}</h5>
-            </div>
-            <div className="row main-content">
-                <div className="col-md-6">
-                    <div className="description">
-                        <h6>Descripción</h6>
-                        <p className='description-text'>{description}</p>
+    <div className="item-detail-container">
+        <div className="background-container">
+            <img src={pictureUrl} className="detail-background" />
+        </div>
+        {id > 1 && <Link to={`/detail/${parseInt(id) - 1}`} className="prev-controller"><IoIosArrowBack /></Link>}
+        <div className='item-detail-card' >
+            <div className="row">
+                <div className="col-lg-6">
+                    <div className="detail-img-container">
+                        <img src={pictureUrl} alt="" className="detail-img" /> 
                     </div>
                 </div>
-                <div className="col-md-6">
-                    <div className="track-list">
+                <div className="col-lg-6 titles">
+                    <h4 className='detail-title'>{title}</h4>
+                    <h5 className='detail-artist'>{artist}</h5>
+                    <p className='description-text'>{description}</p>
+                    <p className='price-tag'>$ {price}</p>
+                </div>
+                <div className="row">
+                    <div className="col-lg-6 track-list">
                         <h6>Contenido</h6>
-                        <ol>
-                            {tracks !==undefined && tracks.map((track,i)=>
-                                <li key={i} className="track-item">
-                                    <span className='track-title'>{track.tracktitle}</span>
-                                    <span className='track-duration'>{track.duration}</span>
-                                </li>) }
+                            <ol>
+                                {tracks !==undefined && tracks.map((track,i)=>
+                                    <li key={i} className="track-item">
+                                        <span className='track-title'>{track.tracktitle}</span>
+                                        <span className='track-duration'>{track.duration}</span>
+                                    </li>) 
+                                }
                         </ol>
+                    </div>
+                    <div className="col-lg-6 buy-section">
+                        <ItemCount
+                            initial = {1}
+                            stock = {stock}
+                            onAdd = {onAdd} />
                     </div>
                 </div>
             </div>
@@ -45,16 +59,10 @@ const ItemDetail = ({ productDetail }) => {
             <div className="demo">
                 <Demo productDetail={productDetail}/>
             </div> :
-            <div className="no-demo">
                 <p className='no-demo-text'>Lo lamentamos, este producto no incluye previsualización</p>
-            </div>
             }
-            <p className='col-12 price-tag'>${price}</p>
-            <ItemCount
-                initial = {1}
-                stock = {stock}
-                onAdd = {onAdd} />
         </div>
+        {id < 19 && <Link to={`/detail/${parseInt(id) + 1}`} className="next-controller"><IoIosArrowForward /></Link>}
     </div>
   )
 }

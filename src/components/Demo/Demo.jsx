@@ -6,10 +6,8 @@ const Demo = ({productDetail}) => {
 
   return (
     <div className="demo-container">
-        <h3 className='demo-title'>Demo</h3>
-        <p>Aquí tienes una pequeña muestra de este producto:</p>
-        <>
-            <iframe
+        <p>Demo</p>
+        <iframe
                 width="100%"
                 height={115}
                 scrolling="no"
@@ -32,7 +30,6 @@ const Demo = ({productDetail}) => {
                 }}
             >
             </div>
-        </>
     </div>
     
   )

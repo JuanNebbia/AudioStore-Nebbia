@@ -2,6 +2,7 @@
     background-color: #222;
     padding: 0 10%;
     height: 4.5rem;
+    z-index: 100000;
 }
 
 

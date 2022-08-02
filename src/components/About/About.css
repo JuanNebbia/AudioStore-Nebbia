@@ -1,33 +1,64 @@
+.about{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
 .about-background{
     position: absolute;
+    top: 0;
+    left:-1rem;
     object-fit: cover;
     width: 100vw;
-    filter: grayscale(0.3);
+    filter: grayscale(0.3) blur(0.4rem) brightness(0.7);
 }
 
 .about-card{
-    position: relative;
-    padding: 4rem;
+    width: 35rem;
+    border: none;
+    align-self: center;
+    box-shadow: none;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.about-card:hover .about-img{
+    transform: scale(1.03);
+}
+
+.about-card:hover{
+    box-shadow: none;
+}
+
+.about-overlay{
+    padding: 15% 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-img{
+    filter: grayscale(0.3) brightness(0.3);
+    transition: transform 7s;
 }
 
 .about-title{
-    color: #fce5b0;
+    color: #fff;
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    text-shadow: 0 0 5px black;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .about-content{
-    background-color: #000c;
-    display: flex;
-    padding: 3rem;
-    flex-direction: column;
-    align-items: center;
-
+    color: #fff;
+    width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 0.9rem;
 }
 
-.about-text{
-    color: #fce5b0;
-    margin: 1rem;
+.logo{
+    width: 9rem;
+    margin-top: auto;
 }
