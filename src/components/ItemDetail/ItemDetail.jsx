@@ -30,6 +30,9 @@ const ItemDetail = ({ productDetail }) => {
                     </div>
                 </div>
                 <div className="col-lg-6 titles">
+                    <div className="genres-container">
+                        {genres?.map((genre)=><Link to={`/category/${genre}`} className="genres">{genre}</Link>)}
+                    </div>
                     <h4 className='detail-title'>{title}</h4>
                     <h5 className='detail-artist'>{artist}</h5>
                     <p className='description-text'>{description}</p>

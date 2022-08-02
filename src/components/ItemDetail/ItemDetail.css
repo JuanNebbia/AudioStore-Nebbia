@@ -8,6 +8,7 @@
     width: 100vw;
     height: 200vh;
     position: absolute;
+    left: -0.5rem;
     overflow: hidden;
     margin: 0;
 }
@@ -49,6 +50,27 @@
 .titles{
     display: flex;
     flex-direction: column;
+}
+
+.genres-container{
+    display: flex;
+}
+
+.genres{
+    font-size: 0.8rem;
+    color: #eee;
+    background-color: #777;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2rem 0.3rem;
+    margin: 0.3rem ;
+    margin-left: 0;
+    text-decoration: none;
+}
+
+.genres:hover{
+    color: #fff;
+    background-color: #888;
 }
 
 .detail-title{
