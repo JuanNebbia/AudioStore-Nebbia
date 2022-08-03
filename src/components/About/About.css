@@ -1,7 +1,8 @@
 .about{
     display: flex;
     justify-content: center;
-    padding: 3rem;
+    height: 100vh;
+    align-items: center;
 }
 
 .about-background{
@@ -14,24 +15,19 @@
 }
 
 .about-card{
-    width: 35rem;
+    width: 50rem;
     border: none;
     align-self: center;
     box-shadow: none;
-    overflow: hidden;
     border-radius: 0;
+    background-color: transparent;
+    align-self: center;
 }
 
-.about-card:hover .about-img{
-    transform: scale(1.03);
-}
 
-.about-card:hover{
-    box-shadow: none;
-}
 
 .about-overlay{
-    padding: 15% 10%;
+    padding: 8% 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -39,7 +35,7 @@
 }
 
 .about-img{
-    filter: grayscale(0.3) brightness(0.3);
+    filter: grayscale(0.3) brightness(0.8);
     transition: transform 7s;
 }
 
@@ -47,18 +43,14 @@
     color: #fff;
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: auto;
+    text-shadow: 0 0 4px black;
 }
 
 .about-content{
     color: #fff;
-    width: 70%;
+    width: 35%;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 0.9rem;
-}
-
-.logo{
-    width: 9rem;
-    margin-top: auto;
+    font-size: 0.85rem;
 }

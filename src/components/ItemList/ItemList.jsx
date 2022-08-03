@@ -2,11 +2,14 @@ import React from 'react'
 import Item from '../Item/Item'
 import './ItemList.css'
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, categoryId }) => {
   return (
-    <div className='item-list'>
-      {items.map((item)=><Item key={item.id} product={item} />)}
-    </div>
+    <>
+      {categoryId && <h3 className='category-title'>Categoría: {categoryId}</h3>}
+      <div className='item-list'>
+        {items.map((item)=><Item key={item.id} product={item} />)}
+      </div>
+    </>
     
   )
 }

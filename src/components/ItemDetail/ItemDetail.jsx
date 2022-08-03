@@ -7,7 +7,7 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 
 const ItemDetail = ({ productDetail }) => {
     const {title, artist, genres, pictureUrl, price, description, stock, tracks, demo, id} = productDetail
-    const [compra, setCompra] = useState(false)
+    const [purchase, setPurchase] = useState(false)
     const [count, setCount] = useState(1)
     const navigate = useNavigate()
 
@@ -18,7 +18,7 @@ const ItemDetail = ({ productDetail }) => {
             alert(`Se ha agregado 1 item al carrito`)
         }
         setCount(quantityToAdd)
-        setCompra(true)
+        setPurchase(true)
 
     }
 
@@ -27,7 +27,7 @@ const ItemDetail = ({ productDetail }) => {
         <div className="background-container">
             <img src={pictureUrl} className="detail-background" />
         </div>
-        {id > 1 && <Link to={`/detail/${parseInt(id) - 1}`} className="prev-controller"><IoIosArrowBack /></Link>}
+        {/* {id > 1 && <Link to={`/detail/${parseInt(id) - 1}`} className="prev-controller"><IoIosArrowBack /></Link>} */}
         <div className='item-detail-card' >
             <div className="row">
                 <div className="col-lg-6">
@@ -57,7 +57,7 @@ const ItemDetail = ({ productDetail }) => {
                         </ol>
                     </div>
                     <div className="col-lg-6 buy-section">
-                        {compra? 
+                        {purchase? 
                             <div className='btn-cart-container'>
                                 <button className="btn btn-keep" onClick={()=>navigate('/')}>Seguir comprando</button>
                                 <button className="btn btn-cart" onClick={()=>navigate('./cart')}>Ver carrito</button>
@@ -65,6 +65,8 @@ const ItemDetail = ({ productDetail }) => {
                         : <ItemCount
                             stock = {stock}
                             onAdd = {onAdd} 
+                            count = {count}
+                            setCount = {setCount}
                         />}
                     </div>
                 </div>
@@ -76,7 +78,7 @@ const ItemDetail = ({ productDetail }) => {
                 <p className='no-demo-text'>Lo lamentamos, este producto no incluye previsualización</p>
             }
         </div>
-        {id < 19 && <Link to={`/detail/${parseInt(id) + 1}`} className="next-controller"><IoIosArrowForward /></Link>}
+        {/* {id < 19 && <Link to={`/detail/${parseInt(id) + 1}`} className="next-controller"><IoIosArrowForward /></Link>} */}
     </div>
   )
 }
