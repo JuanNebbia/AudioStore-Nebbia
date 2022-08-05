@@ -1,16 +1,20 @@
 .item-card{
     width: 18rem;
     height: fit-content;
-    min-height: 22rem;
+    min-height: 23rem;
     transition: scale, 0.2s;
     display: flex;
     margin-top: 3rem;
     box-shadow: 0 0 2px #999;
 }
 
+.item-card:hover{
+    cursor: pointer;
+}
+
 .img-container{
     display: flex;
-    height: 10rem;
+    height: 13rem;
     width: 100%;
     overflow: hidden;
 }
@@ -67,9 +71,12 @@ p.item-card-img-overlay{
     color: #fff;
 }
 
-.btn-primary{
+.ver-detalles-btn{
     width: 100%;
     margin-top: 0;
+    background-color: transparent;
+    color: #000;
+    border: none;
 }
 
 .card-footer{

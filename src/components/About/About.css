@@ -24,8 +24,6 @@
     align-self: center;
 }
 
-
-
 .about-overlay{
     padding: 8% 0;
     text-align: center;
@@ -34,10 +32,6 @@
     align-items: center;
 }
 
-.about-img{
-    filter: grayscale(0.3) brightness(0.8);
-    transition: transform 7s;
-}
 
 .about-title{
     color: #fff;
@@ -53,4 +47,5 @@
     margin-top: auto;
     margin-bottom: auto;
     font-size: 0.85rem;
+    text-shadow: 0 0 4px black;
 }

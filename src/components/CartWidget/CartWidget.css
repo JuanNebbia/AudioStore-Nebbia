@@ -1,11 +1,17 @@
-.cart-container{
-    border-radius: 50%;
-    width: 3.2rem;
+.cart-widget-container{
     height: 3.2rem;
     display: flex;
 }
 
-.cart-anchor{
+.cart-icon-container{
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.cart-icon-link{    
     margin: auto;
 }
 
@@ -13,12 +19,26 @@
     height: 1.7rem;
 }
 
-.cart-container:hover{
+.cart-icon-container:hover{
     background-color: #555;
     box-shadow: 0 0 2px black;
 }
 
-.cart-container:active{
+.item-count{
+    border-radius: 50%;
+    font-size: 0.9rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    text-align: center;
+    margin-left: -0.5rem;
+}
+
+
+.cart-icon-container:active{
     box-shadow: none;
     transform: scale(0.97);
+}
+
+.item-count{
+    color: beige;
 }
