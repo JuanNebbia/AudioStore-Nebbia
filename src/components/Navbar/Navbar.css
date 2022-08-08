@@ -24,24 +24,44 @@
     text-decoration: none;
 }
 
-#nav-section-products:hover, #nav-section-products:focus{
+#nav-section-products:hover{
     color: #ec1941;
+}
+
+#nav-section-products:focus{
+    color: #ec1941;
+    font-weight: 500;
 }
 
 #nav-section-genres{
     color: #fce5b0;
 }
 
-#nav-section-genres:hover, #nav-section-genres:focus{
+#nav-section-genres:hover{
     color: #fb6e3f;
 }
 
-#nav-section-about:hover, #nav-section-about:focus{
+#nav-section-genres:focus{
+    color: #fb6e3f;
+    font-weight: 500;
+}
+
+#nav-section-about:hover{
     color: #ffad00;
 }
 
-#nav-section-contact:hover, #nav-section-contact:focus{
+#nav-section-about:focus{
+    color: #ffad00;
+    font-weight: 500;
+}
+
+#nav-section-contact:hover{
     color: #005a65;
+}
+
+#nav-section-contact:focus{
+    color: #005a65;
+    font-weight: 500;
 }
 
 .dropdown-item{

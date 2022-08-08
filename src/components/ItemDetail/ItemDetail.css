@@ -144,36 +144,6 @@ h6{
     justify-content: space-between;
 }
 
-.btn-cart{
-    font-size: 1rem;
-    padding:0.5rem;
-    background-color: #e72;
-    border: none;
-    color: #fff;
-    border-radius: 10px;
-    width: 47%;
-}
-
-.btn-cart:hover{
-    background-color: #c50;
-    color: #fff;
-}
-
-.btn-keep{
-    font-size: 1rem;
-    padding:0.5rem;
-    background-color: #2a5;
-    border: none;
-    color: #fff;
-    border-radius: 10px;
-    width: 47%;
-}
-
-.btn-keep:hover{
-    background-color: #083;
-    color: #fff;
-}
-
 .demo{
     width: 100%;
 }

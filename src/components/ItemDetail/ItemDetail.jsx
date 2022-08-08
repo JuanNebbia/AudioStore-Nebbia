@@ -60,8 +60,8 @@ const ItemDetail = ({ productDetail }) => {
                     <div className="col-lg-6 buy-section">
                         {purchase? 
                             <div className='btn-cart-container'>
-                                <button className="btn btn-keep" onClick={()=>navigate('/')}>Seguir comprando</button>
-                                <button className="btn btn-cart" onClick={()=>navigate('/cart')}>Terminar mi compra</button>
+                                <button className="btn btn-primary" onClick={()=>navigate('/')}>Seguir comprando</button>
+                                <button className="btn btn-success" onClick={()=>navigate('/cart')}>Terminar mi compra</button>
                             </div>
                         : <ItemCount
                             stock = {stock}

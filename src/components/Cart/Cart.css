@@ -25,6 +25,26 @@
     text-decoration: none;
 }
 
-.clean-button{
-    margin-right: 0.5rem;
+.cart-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+}
+
+
+.purchase-toast-container{
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+}
+
+.purchase-toast-title{
+    font-size: 2rem;
+    color: #3b5;
+    margin: auto;
+}
+
+.purchase-toast-text{
+    font-size: 1rem;
+    text-align: center;
 }

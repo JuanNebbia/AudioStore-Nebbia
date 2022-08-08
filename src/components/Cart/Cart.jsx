@@ -1,12 +1,17 @@
-import React, { useContext} from 'react'
+import React, { useContext, useState} from 'react'
 import './Cart.css'
 import { CartContext } from '../../context/CartContext'
-import { Table } from 'react-bootstrap'
+import { Col, Row, Table, Toast, ToastContainer } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
   const { cart, removeItem, clear, totalPrice } = useContext(CartContext)
+  const [show, setShow] = useState(false);
 
+  const purchase = () =>{
+    setShow(true)
+    clear()
+  }
 
 
   return (
@@ -48,10 +53,13 @@ const Cart = () => {
             </tr>
           </tbody>
         </Table>
-        <button className="clean-button btn btn-danger" onClick={clear}>Vaciar Carrito</button>
-        <button className='btn btn-primary'>
-            <Link to={'/'} className="cart-to-products">Volver a los productos</Link>
-        </button>
+        <div className="cart-buttons">
+          <button className="purchase-button btn btn-success" onClick={purchase}>Comprar Todo</button>
+          <button className="clean-button btn btn-danger" onClick={clear}>Vaciar Carrito</button>
+          <button className='btn btn-primary'>
+              <Link to={'/'} className="cart-to-products">Volver a los productos</Link>
+          </button>
+        </div>
       </div>
       : <div className='no-cart'>
           <p>El carrito está vacío</p>
@@ -60,7 +68,20 @@ const Cart = () => {
           </button>
         </div>
       } 
+      <ToastContainer className='purchase-toast-container'>
+        <Row>
+            <Col>
+                <Toast onClose={() => setShow(false)} show={show} delay={5000} autohide>
+                <Toast.Header>
+                    <strong className="me-auto purchase-toast-title">¡Genial!</strong>
+                </Toast.Header>
+                <Toast.Body className="purchase-toast-text">Su compra se realizó exitosamente</Toast.Body>
+                </Toast>
+            </Col>
+        </Row>
+      </ToastContainer>
     </div>
+    
   )
 }
 
