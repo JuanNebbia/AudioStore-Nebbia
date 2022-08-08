@@ -1,7 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './App.css';
-import Navbar from "./components/Navbar/Navbar"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import About from './components/About/About';
@@ -9,6 +7,7 @@ import Contact from './components/Contact/Contact';
 import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartProvider from './context/CartContext';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
 

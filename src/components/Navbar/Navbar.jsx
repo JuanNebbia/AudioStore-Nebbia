@@ -1,56 +1,49 @@
-import './Navbar.css'
+import { useContext } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 import Logo from '../../img/logo.png'
-import CartWidget from '../CartWidget/CartWidget'
-import { Link } from 'react-router-dom'
+import CartWidget from '../CartWidget/CartWidget';
+import './Navbar.css'
 
-const Navbar = () =>{
-    return (
-        <nav className="navbar navbar-expand-lg">
-            <div className="container-fluid">
-                <Link className="link" to={'/'}>
-                    <div className='navbar-brand'>
-                        <img src={Logo} alt='logo' className='logo-navbar' />
-                    </div>
-                </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon" />
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
-                        <Link className="nav-link-inicio" to={'/'}>Inicio</Link>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link-generos dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categorías
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><Link class="dropdown-item" to={'/category/contemporaneo'}>Contemporáneo</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/tango'}>Tango</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/piano'}>Piano</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/ambiental'}>Ambiental</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/naturaleza'}>Naturaleza</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/experimental'}>Experimental</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/minimalista'}>Minimalista</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/clásico'}>Clásico</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/ópera'}>Ópera</Link></li>
-                            <li><Link class="dropdown-item" to={'/category/acustico'}>Acústico</Link></li>
-                        </ul>
-                        </li>
-                    <li className="nav-item">
-                        <Link className="nav-link-about active" to={'/about'}>Sobre Nosotros</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link-contacto active" to={'/contact'}>Contacto</Link>
-                    </li>
-                </ul>
-                </div>
-                <CartWidget />
-            </div>
-        </nav>
-        
-    );
+const Navbarr = () => {
+  const { cart } = useContext(CartContext)
+
+  return (
+    <Navbar expand="lg" className="navbar" variant="dark">
+      <Container>
+        <Navbar.Brand>
+            <Link to={'./'}>
+              <img src={Logo} alt='logo' className='logo-navbar' />
+            </Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto navbar-content">
+            <Link to={"/"} className="nav-section" id="nav-section-products">Productos</Link>
+            <NavDropdown title="Géneros" id="nav-section-genres" className="nav-section"> 
+              <Link to={"/category/contemporaneo"} className="dropdown-item">Contemporáneo</Link>
+              <Link to={"/category/tango"} className="dropdown-item">Tango</Link>
+              <Link to={"/category/piano"} className="dropdown-item">Piano</Link>
+              <Link to={"/category/ambiental"} className="dropdown-item">Ambiental</Link>
+              <Link to={"/category/naturaleza"} className="dropdown-item">Naturaleza</Link>
+              <Link to={"/category/experimental"} className="dropdown-item">Experimental</Link>
+              <Link to={"/category/minimalista"} className="dropdown-item">Minimalista</Link>
+              <Link to={"/category/clasico"} className="dropdown-item">Clásico</Link>
+              <Link to={"/category/opera"} className="dropdown-item">Ópera</Link>
+              <Link to={"/category/acustico"} className="dropdown-item">Acústico</Link>
+            </NavDropdown>
+            <Link to={"/about"} className="nav-section" id="nav-section-about">Sobre Nosotros</Link>
+            <Link to={"/contact"} className="nav-section" id="nav-section-contact">Contacto</Link>
+          </Nav>
+        </Navbar.Collapse>
+        {cart.length > 0 && <CartWidget />}
+      </Container>
+    </Navbar>
+  );
 }
 
-  export default Navbar;
-  
+export default Navbarr;

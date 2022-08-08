@@ -5,76 +5,50 @@
     z-index: 100000;
 }
 
-
 .logo-navbar{
     height: 3.7rem;
     margin-right: 0.8rem;
 }
 
+.navbar-content{
+    display: flex;
+    align-items: center;
+}
 
-.nav-item > a{
+.nav-section{
     font-size: 1.2rem;
-    height: 3.7rem;
-    padding: 1.45rem;
+    margin: 1rem;
+    color: #fce5b0;
+    font-weight: 400;
+    border-radius: 15px;
+    text-decoration: none;
 }
 
-.nav-link-inicio:hover{
+#nav-section-products:hover, #nav-section-products:focus{
     color: #ec1941;
-    font-weight: 500;
-    text-decoration: none;
 }
 
-.nav-link-generos:hover{
+#nav-section-genres{
+    color: #fce5b0;
+}
+
+#nav-section-genres:hover, #nav-section-genres:focus{
     color: #fb6e3f;
-    font-weight: 500;
-    text-decoration: none;
 }
 
-.nav-link-about:hover{
+#nav-section-about:hover, #nav-section-about:focus{
     color: #ffad00;
 }
 
-.nav-link-contacto:hover{
+#nav-section-contact:hover, #nav-section-contact:focus{
     color: #005a65;
-    text-decoration: none;
 }
 
-.nav-link-inicio:focus{
-    background-color: #ec1941;
-    color: #222;
+.dropdown-item{
+    background-color: #fce5b0;
+    color: #222
 }
 
-.nav-link-generos:focus{
-    background-color: #fb6e3f;
-    color: #222;
-}
-
-.nav-link-about:focus{
-    background-color: #ffad00;
-    color: #222;
-}
-
-.nav-link-contacto:focus{
-    background-color: #005a65;
-    color: #222;
-}
-
-.nav-item > a{
-    color: #fce5b0;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.navbar-nav{
-    justify-content: space-evenly;
-    display: flex;
-    width: 100%;
-}
-
-.form-control{
-    width: fit-content;
-}
-
-.navbar-toggler{
-    background-color: #d8c5aa;
+.dropdown-item:hover{
+    background-color: #fff;
 }

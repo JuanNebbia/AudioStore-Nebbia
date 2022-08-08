@@ -2,7 +2,29 @@
     padding: 4rem 10%;
 }
 
+
+#item-full-title{
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
 .item-title{
-    font-weight: 500;
     font-size: 1.05rem;
+    color: #fff;
+    margin-right: 0.3rem;
+}
+
+
+.monto-total{
+    font-size: 1.5rem;
+    color: #f85;
+}
+
+.cart-to-products, .cart-to-products:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.clean-button{
+    margin-right: 0.5rem;
 }

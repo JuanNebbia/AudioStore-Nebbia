@@ -1,20 +1,23 @@
 import './CartWidget.css'
 import Cart from '../../img/cart.png'
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import Badge from 'react-bootstrap/Badge'
 
 const CartWidget = () =>{
-    const {cartSize} = useContext(CartContext)
-    
+    const { cartSize } = useContext(CartContext)
+
     return (
         <div className='cart-widget-container'>
-            <div className="cart-icon-container">
+            <button className="cart-icon-btn">
                 <Link to={'/cart'} className="cart-icon-link">
-                    <img className='cart-img' src={Cart} />
+                    <img className='cart-img' src={Cart} alt='cart widget' />
                 </Link>
-            </div>
-            <p className='item-count'>{cartSize}</p>
+                <Badge pill bg="success">
+                    {cartSize() < 10 ? cartSize() : '9+'}
+                </Badge>
+            </button>
         </div>
     );
 }

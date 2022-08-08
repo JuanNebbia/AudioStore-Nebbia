@@ -1,38 +1,38 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Demo from '../Demo/Demo'
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
-import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { CartContext } from '../../context/CartContext'
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Toast from 'react-bootstrap/Toast';
+import { ToastContainer } from 'react-bootstrap'
 
 const ItemDetail = ({ productDetail }) => {
     const {title, artist, genres, pictureUrl, price, description, stock, tracks, demo, id} = productDetail
     const [purchase, setPurchase] = useState(false)
     const [count, setCount] = useState(1)
+    const [show, setShow] = useState(false);
     const navigate = useNavigate()
-    const {addItem, cleanCart, isInCart} = useContext(CartContext)
-
-    useEffect(()=>{
-    },[count])
+    const {addItem, removeItem} = useContext(CartContext)
 
     const onAdd = (quantityToAdd) =>{
         setCount(quantityToAdd)
         addItem(productDetail, quantityToAdd)
         setPurchase(true)
-
+        setShow(true)
     }
 
   return (
     <div className="item-detail-container">
         <div className="background-container">
-            <img src={pictureUrl} className="detail-background" />
+            <img src={pictureUrl} className="detail-background" alt="background" />
         </div>
-        {/* {id > 1 && <Link to={`/detail/${parseInt(id) - 1}`} className="prev-controller"><IoIosArrowBack /></Link>} */}
         <div className='item-detail-card' >
             <div className="row">
                 <div className="col-lg-6">
-                    <div className="detail-img-container" onDoubleClick={cleanCart}>
+                    <div className="detail-img-container">
                         <img src={pictureUrl} alt={title} title={title} className="detail-img" /> 
                     </div>
                 </div>
@@ -61,13 +61,14 @@ const ItemDetail = ({ productDetail }) => {
                         {purchase? 
                             <div className='btn-cart-container'>
                                 <button className="btn btn-keep" onClick={()=>navigate('/')}>Seguir comprando</button>
-                                <button className="btn btn-cart" onClick={()=>navigate('/cart')}>Ver carrito</button>
+                                <button className="btn btn-cart" onClick={()=>navigate('/cart')}>Terminar mi compra</button>
                             </div>
                         : <ItemCount
                             stock = {stock}
                             onAdd = {onAdd} 
                             count = {count}
                             setCount = {setCount}
+                            showtoast = {show}
                         />}
                     </div>
                 </div>
@@ -79,7 +80,20 @@ const ItemDetail = ({ productDetail }) => {
                 <p className='no-demo-text'>Lo lamentamos, este producto no incluye previsualización</p>
             }
         </div>
-        {/* {id < 19 && <Link to={`/detail/${parseInt(id) + 1}`} className="next-controller"><IoIosArrowForward /></Link>} */}
+        <ToastContainer className='toast-container'>
+        <Row className='toast-row'>
+            <Col>
+                <Toast onClose={() => setShow(false)} show={show} delay={5000} autohide>
+                <Toast.Header>
+                    <strong className="me-auto">{title}</strong>
+                    <small>cantidad: {count}</small>
+                </Toast.Header>
+                <Toast.Body>Se agregó el item al carrito!</Toast.Body>
+                <button className='btn cancel-btn' onClick={()=>removeItem(id)}>cancelar</button>
+                </Toast>
+            </Col>
+        </Row>
+        </ToastContainer>
     </div>
   )
 }

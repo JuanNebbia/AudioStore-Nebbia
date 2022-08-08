@@ -69,21 +69,8 @@
     justify-content: center;
 }
 
-.warning, .stock{
-    color: #000;
-    background-color: #d33;
-    width: fit-content;
-    height: 1.7rem;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-}
 
-.stock{
-    background-color: #44e;
-}
-
-.btn-comprar-container{
+.btn-add-container{
     display: flex;
     width: 100%;
     gap: 0.5rem;
@@ -97,6 +84,11 @@
     color: #fff;
     border-radius: 10px;
     width: 50%;
+}
+
+.btn-add:hover{
+    background-color: #529;
+    color: #fff;
 }
 
 

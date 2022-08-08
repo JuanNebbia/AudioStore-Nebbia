@@ -154,6 +154,11 @@ h6{
     width: 47%;
 }
 
+.btn-cart:hover{
+    background-color: #c50;
+    color: #fff;
+}
+
 .btn-keep{
     font-size: 1rem;
     padding:0.5rem;
@@ -162,6 +167,11 @@ h6{
     color: #fff;
     border-radius: 10px;
     width: 47%;
+}
+
+.btn-keep:hover{
+    background-color: #083;
+    color: #fff;
 }
 
 .demo{
@@ -196,3 +206,16 @@ h6{
 .prev-controller:hover, .next-controller:hover{
     color: #fff;
 }
+
+.toast-container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.cancel-btn, .cancel-btn:hover{
+    color: #d33;
+    border: none;
+    font-weight: 700;
+}
+

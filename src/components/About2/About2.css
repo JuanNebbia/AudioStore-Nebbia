@@ -1,4 +1,4 @@
-.about{
+/* .about{
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -11,7 +11,7 @@
     left:-1rem;
     object-fit: cover;
     width: 100vw;
-    filter: grayscale(0.3) blur(0.4rem) brightness(0.3);
+    filter: grayscale(0.3) blur(0.4rem) brightness(0.7);
 }
 
 .about-card{
@@ -48,4 +48,4 @@
     margin-bottom: auto;
     font-size: 0.85rem;
     text-shadow: 0 0 4px black;
-}
+} */

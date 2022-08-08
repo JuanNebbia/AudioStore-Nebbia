@@ -1,4 +1,5 @@
 import './ItemCount.css'
+import Badge from 'react-bootstrap/Badge'
 
 const ItemCount = ({ stock, onAdd, count, setCount}) =>{
 
@@ -23,14 +24,14 @@ const ItemCount = ({ stock, onAdd, count, setCount}) =>{
                 <button onClick={sumar} disabled={count>=stock} className='btn-suma'>+</button>
             </div>
             <div className="warning-container">
-                {count === stock && <p className="stock">¡Stock máximo del producto!</p>}
-                {stock === 0 && <p className="warning">Este producto se encuentra agotado</p> }
+                {count === stock && <Badge pill bg="primary">Stock disponible del producto</Badge>}
+                {stock === 0 && <Badge pill bg="danger">Este producto se encuentra agotado</Badge>}
             </div>
-            <div className="btn-comprar-container">
+            <div className="btn-add-container">
                 <button 
                     onClick={()=>{onAdd(count)}} 
                     className='btn btn-add'
-                    disabled={stock === 0}>
+                    hidden={stock === 0}>
                     Agregar al carrito
                 </button>
             </div>

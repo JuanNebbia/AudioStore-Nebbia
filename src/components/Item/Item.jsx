@@ -1,28 +1,34 @@
-import React from 'react'
+import Card from 'react-bootstrap/Card';
 import './Item.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { Badge } from 'react-bootstrap';
 
 const Item = ({ product }) => {
-  const {title, artist, genres, pictureUrl, price, description, stock, tracks, id} = product
-  const navigate = useNavigate()
+    const {title, artist, pictureUrl, price, tracks, stock, id} = product
+    const navigate = useNavigate()
 
   return (
-    <div className="item-card card mb-3" onClick={()=>navigate(`/detail/${id}`)}>
+    <Card className="item-card" onClick={()=>navigate(`/detail/${id}`)}>
         <div className='img-container'>
-          <img src={pictureUrl} className="card-img-top" alt={title} />
-          <p className='card-img-overlay item-card-img-overlay'>${price}</p>
+            <Card.Img src={pictureUrl} alt={title} className="card-img-top" />
         </div>
-        <div className="card-body item-card-body">
-          <h5 className="card-title item-card-title">{title}</h5>
-          <p className="card-text item-card-text">{artist}</p>
-          <div className="card-footer">
-            <p className='text-muted text-footer'>Este producto incluye 
-              <span className='length'> {tracks.length}</span> {tracks.length == 1 ? 'pista' : 'pistas'}
-            </p>
-          </div>
-        </div>
-    </div>
-  )
+        <Card.ImgOverlay className="item-card-img-overlay">
+            <Card.Text className='item-card-overlay'>${price}</Card.Text>
+        </Card.ImgOverlay>
+        <Card.Body className="item-card-body">
+            <Card.Title className='item-card-title'>{title}</Card.Title>
+            <Card.Text className='item-card-text'>{artist}</Card.Text>
+            {stock === 0 && <Badge bg="danger">Agotado</Badge>}
+            {stock === 1 && <Badge>Último disponible</Badge>}
+            <footer className='card-footer'>
+                <p className='text-muted text-footer'>Este producto incluye 
+                    <span className='length'> {tracks.length}</span> {tracks.length === 1 ? 'pista' : 'pistas'}
+                </p>
+            </footer>
+        </Card.Body>
+       
+    </Card>
+  );
 }
 
-export default Item
+export default Item;
