@@ -65,10 +65,10 @@
 }
 
 .dropdown-item{
-    background-color: #fce5b0;
-    color: #222
+    color: #222;
+    font-weight: 500;
 }
 
 .dropdown-item:hover{
-    background-color: #fff;
+    background-color: #fb6e3f;
 }

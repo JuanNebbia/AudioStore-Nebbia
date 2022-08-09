@@ -28,7 +28,7 @@ const CartProvider = ({children}) =>{
     const removeItem = (id) => {
         const smallerCartDraft = cart.filter(data=> data.id !== id)
         setCart(smallerCartDraft)
-        };
+    };
 
 
     const cartSize = () =>{

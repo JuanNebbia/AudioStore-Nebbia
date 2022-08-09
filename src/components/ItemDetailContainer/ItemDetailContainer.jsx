@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 
 const ItemDetailContainer = () => {
@@ -16,9 +17,13 @@ const ItemDetailContainer = () => {
       .finally(setLoading(false))
   },[itemId])
 
+
     return (
         <>
-          {loading? <h3>Cargando...</h3> : <ItemDetail productDetail = {productDetail}/>}
+          { loading ? 
+            <Loader />
+            : <ItemDetail productDetail = {productDetail}/>
+          }
         </>
   )
 }

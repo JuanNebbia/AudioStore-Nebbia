@@ -16,10 +16,10 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h2>Carrito</h2>
+      <h2 className='cart-title'>Carrito</h2>
       {cart.length > 0 ?
       <div> 
-        <Table responsive="xl" striped borderless variant="dark" className='cart-table align-middle'>
+        <Table responsive="xl" striped borderless variant="light" className='cart-table align-middle'>
           <thead>
             <tr>
               <th scope='col' style={{paddingLeft: '1rem', borderTopLeftRadius:'10px'}}>Item</th>
@@ -32,7 +32,7 @@ const Cart = () => {
           <tbody>
             {cart.map((item)=>
                 <tr key={item.id} style={{height:'fit-content'}}>
-                  <td id='item-full-title' style={{paddingLeft: '1rem', color:'#aaa', fontSize: '0.9rem'}}>
+                  <td id='item-full-title' style={{paddingLeft: '1rem', fontSize: '0.9rem'}}>
                     <span className='item-title'>{item.title}</span>
                       de {item.artist}
                   </td>
@@ -47,8 +47,8 @@ const Cart = () => {
             <tr> 
               <td colSpan={5} 
                 className='monto-total' 
-                style={{color: '#f85', padding: '1rem', borderBottomLeftRadius:'10px', borderBottomRightRadius:'10px'}}>
-                Monto total: ${totalPrice()}
+                style={{color: '#e41', padding: '1rem', borderBottomLeftRadius:'10px', borderBottomRightRadius:'10px'}}>
+                Monto total: <strong>${totalPrice()}</strong>
               </td>
             </tr>
           </tbody>
@@ -62,7 +62,7 @@ const Cart = () => {
         </div>
       </div>
       : <div className='no-cart'>
-          <p>El carrito está vacío</p>
+          <p className='empty-cart-text'>El carrito está vacío</p>
           <button className='btn btn-primary'>
             <Link to={'/'} className="cart-to-products">Ir a los productos</Link>
           </button>

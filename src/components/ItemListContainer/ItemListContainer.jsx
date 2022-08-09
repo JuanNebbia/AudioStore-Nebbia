@@ -1,6 +1,7 @@
 import ItemList from '../ItemList/ItemList'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader';
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
@@ -23,7 +24,10 @@ const ItemListContainer = () => {
 
     return (
         <div className='item-list-container'>
-            {loading ? <h3>Cargando productos</h3> : <ItemList items = {products} categoryId= {categoryId} />}
+        { loading ? 
+            <Loader /> 
+            : <ItemList items = {products} categoryId= {categoryId} loading={loading}/>
+        }
         </div>
     )
 }

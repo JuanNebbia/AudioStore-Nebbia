@@ -1,0 +1,23 @@
+.dice-icon-container{
+    display: flex;
+    position: sticky;
+    top: 1rem;
+}
+
+.dice-icon{
+    color: #fce5b0;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transition: transform 0.2s;
+}
+
+.dice-icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.dice-btn, .dice-btn:hover, .dice-btn:active, .dice-btn:focus{
+    border: none;
+    background-color: transparent;
+}
