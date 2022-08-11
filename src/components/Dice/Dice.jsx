@@ -8,12 +8,18 @@ import Button from 'react-bootstrap/Button';
 
 
 const Dice = ({items}) => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
+  
+  const randomItem = () =>{
+    const idList = []
+    items.forEach(item => {
+      idList.push(item.id)
+    })
+    console.log(idList)
+    const randomIndex = Math.floor(Math.random() * (idList.length))
 
-    const randomItem = () =>{
-        const valores = Math.floor(Math.random() * (items.length) + 1)
-        navigate(`/detail/${valores}`)
-    }
+    navigate(`/item/${idList[randomIndex]}`)
+  }
 
 
   return (

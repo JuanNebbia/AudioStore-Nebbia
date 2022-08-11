@@ -2,7 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyApx7S7RbKFp0IwAM0AEwo8Xujb8ctyLGA",
+  authDomain: "audiostore-d7fa6.firebaseapp.com",
+  projectId: "audiostore-d7fa6",
+  storageBucket: "audiostore-d7fa6.appspot.com",
+  messagingSenderId: "823056145424",
+  appId: "1:823056145424:web:6cc8ad039f7403275cbe95",
+  measurementId: "G-PF296X194B"
+};
+
+initializeApp(firebaseConfig);
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

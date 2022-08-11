@@ -5,7 +5,7 @@ import './Contact.css'
 const Contact = () => {
   return (
     <div className='contact'>
-      <img src={ContactBackground} className="contact-background" />
+      <img src={ContactBackground} className="contact-background" alt="imagen de fondo" />
       <div className="contact-card">
         <h2 className='contact-title'>Contactos</h2>
         <div className="contact-content">

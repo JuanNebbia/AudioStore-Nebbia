@@ -8,7 +8,7 @@ const Item = ({ product }) => {
     const navigate = useNavigate()
 
   return (
-    <Card className={stock > 0 ?"item-card" : "item-card-disabled"} onClick={()=>navigate(`/detail/${id}`)}>
+    <Card className={stock > 0 ?"item-card" : "item-card-disabled"} onClick={()=>navigate(`/item/${id}`)}>
         <div className='img-container'>
             <Card.Img src={pictureUrl} alt={title} className="card-img-top" />
         </div>
@@ -18,7 +18,7 @@ const Item = ({ product }) => {
         <Card.Body className="item-card-body">
             <Card.Title className='item-card-title'>{title}</Card.Title>
             <Card.Text className='item-card-text'>{artist}</Card.Text>
-            {stock === 0 && <Badge bg="danger" style={{width: 'fit-content', margin:'auto', padding:'0.2rem 1rem'}}>Agotado</Badge>}
+            {stock === 0 && <Badge bg="danger" id="agotado" style={{width: 'fit-content', margin:'auto', padding:'0.2rem 1rem'}}>Agotado</Badge>}
             {stock === 1 && <Badge bg="primary" style={{width: 'fit-content', margin:'auto', padding:'0.2rem 1rem'}}>Último disponible</Badge>}
             <footer className='card-footer'>
                 <p className='text-muted text-footer'>Este producto incluye 

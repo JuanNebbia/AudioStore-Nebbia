@@ -13,6 +13,7 @@ const Demo = ({productDetail}) => {
                 scrolling="no"
                 frameBorder="no"
                 allow="autoplay"
+                title="demo del producto"
                 src={demo}
             />
             <div
