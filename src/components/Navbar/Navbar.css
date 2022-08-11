@@ -1,7 +1,7 @@
 .navbar{
-    background-color: #222;
+    background-color: #0a0a0f;
     padding: 0 10%;
-    height: 4.5rem;
+    height: 5.5rem;
     z-index: 100000;
 }
 
@@ -71,4 +71,9 @@
 
 .dropdown-item:hover{
     background-color: #fb6e3f;
+}
+
+#see-all-genres:hover{
+    background-color: #222;
+    color: #fff;
 }

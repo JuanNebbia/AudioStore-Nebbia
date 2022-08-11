@@ -85,7 +85,7 @@ const ItemDetail = ({ productDetail }) => {
             <Col>
                 <Toast onClose={() => setShow(false)} show={show} delay={5000} autohide>
                 <Toast.Header>
-                    <strong className="me-auto">{title}</strong>
+                    <strong className="me-auto detail-toast-title">{title}</strong>
                     <small>cantidad: {count}</small>
                 </Toast.Header>
                 <Toast.Body>Se agregó el item al carrito!</Toast.Body>

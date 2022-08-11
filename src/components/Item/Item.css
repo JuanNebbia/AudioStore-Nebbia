@@ -1,10 +1,10 @@
 .item-card{
-    width: 18rem;
+    width: 16rem;
     height: fit-content;
-    min-height: 23rem;
+    min-height: 20rem;
     transition: scale, 0.2s;
     display: flex;
-    margin-top: 3rem;
+    margin: 3rem 0.5rem 0;
     border: none;
     background-color: #ddd;
 }
@@ -15,10 +15,24 @@
     background-color: #fff;
 }
 
+.item-card-disabled{
+    width: 16rem;
+    height: fit-content;
+    min-height: 20rem;
+    transition: scale, 0.2s;
+    display: flex;
+    margin: 3rem 0.5rem 0;
+    border: none;
+    background-color: #aaa;
+}
+
+.item-card-disabled:hover{
+    cursor: pointer;
+}
 
 .img-container{
     display: flex;
-    height: 13rem;
+    height: 11rem;
     width: 100%;
     overflow: hidden;
     border-top-left-radius: 5px;
@@ -45,11 +59,14 @@
     text-align: center;
     align-self: center;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .item-card-text{
     text-align: center;
     color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .item-card-body{
@@ -84,6 +101,7 @@
     display: flex;
     justify-content: center;
     margin-top: auto;
+    padding-top: 0;
 }
 
 .text-footer{

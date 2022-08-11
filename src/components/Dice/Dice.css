@@ -2,22 +2,32 @@
     display: flex;
     position: sticky;
     top: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    z-index: 100;
 }
 
 .dice-icon{
     color: #fce5b0;
     font-size: 3rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
     transition: transform 0.2s;
 }
 
 .dice-icon:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    animation: shake 0.2s;
 }
 
 .dice-btn, .dice-btn:hover, .dice-btn:active, .dice-btn:focus{
     border: none;
     background-color: transparent;
 }
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(10deg); }
+    40% { transform: rotate(0deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform:  rotate(0deg); }
+    100% { transform: rotate(10deg); }
+  }

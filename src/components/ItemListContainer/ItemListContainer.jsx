@@ -23,10 +23,10 @@ const ItemListContainer = () => {
     }, [categoryId])
 
     return (
-        <div className='item-list-container'>
+        <div className='item-list-container-container'>
         { loading ? 
             <Loader /> 
-            : <ItemList items = {products} categoryId= {categoryId} loading={loading}/>
+            : <ItemList items = {products} categoryId= {categoryId}/>
         }
         </div>
     )

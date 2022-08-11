@@ -54,6 +54,7 @@
 
 .genres-container{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .genres{
@@ -195,6 +196,11 @@ h6{
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+.detail-toast-title{
+    color: #111;
+    font-size: 1.1rem;
 }
 
 .cancel-btn, .cancel-btn:hover{

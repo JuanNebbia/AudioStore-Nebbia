@@ -5,15 +5,12 @@
 
 .cart-icon-btn{
     display: flex;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
     background-color: transparent;
     border: none;
 }
 
 .cart-icon-link{    
-    margin: auto 0.09rem;
+    margin: auto;
 }
 
 .cart-img{
@@ -21,9 +18,7 @@
 }
 
 .cart-icon-btn:hover{
-    background-color: #333;
-    box-shadow: 0 0 2px black;
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .cart-icon-btn:active{

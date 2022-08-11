@@ -18,20 +18,20 @@ const Cart = () => {
     <div className="cart-container">
       <h2 className='cart-title'>Carrito</h2>
       {cart.length > 0 ?
-      <div> 
-        <Table responsive="xl" striped borderless variant="light" className='cart-table align-middle'>
+      <div>
+        <Table responsive="xl" striped bordered variant="light" className='cart-table align-middle'>
           <thead>
-            <tr>
-              <th scope='col' style={{paddingLeft: '1rem', borderTopLeftRadius:'10px'}}>Item</th>
+            <tr className='main-row'>
+              <th scope='col' style={{paddingLeft: '1rem'}}>Item</th>
               <th scope='col'>Cantidad</th>
               <th scope='col'>Precio</th>
               <th scope='col'>Subtotal</th>
-              <th scope='col' style={{borderTopRightRadius:'10px'}}></th>
+              <th scope='col'></th>
             </tr>
           </thead>
           <tbody>
             {cart.map((item)=>
-                <tr key={item.id} style={{height:'fit-content'}}>
+                <tr key={item.id}>
                   <td id='item-full-title' style={{paddingLeft: '1rem', fontSize: '0.9rem'}}>
                     <span className='item-title'>{item.title}</span>
                       de {item.artist}
@@ -45,17 +45,19 @@ const Cart = () => {
                 </tr>
             )}
             <tr> 
-              <td colSpan={5} 
+              <td colSpan={4} 
                 className='monto-total' 
-                style={{color: '#e41', padding: '1rem', borderBottomLeftRadius:'10px', borderBottomRightRadius:'10px'}}>
+                style={{}}>
                 Monto total: <strong>${totalPrice()}</strong>
+              </td>
+              <td>
+                <button className="clean-button btn btn-danger" onClick={clear}>Vaciar Carrito</button>
               </td>
             </tr>
           </tbody>
         </Table>
         <div className="cart-buttons">
           <button className="purchase-button btn btn-success" onClick={purchase}>Comprar Todo</button>
-          <button className="clean-button btn btn-danger" onClick={clear}>Vaciar Carrito</button>
           <button className='btn btn-primary'>
               <Link to={'/'} className="cart-to-products">Volver a los productos</Link>
           </button>

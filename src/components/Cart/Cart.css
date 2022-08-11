@@ -7,6 +7,10 @@
     font-weight: 400;
 }
 
+.main-row{
+    font-size: 1.2rem;
+}
+
 #item-full-title{
     color: #444;
     font-size: 0.9rem;
@@ -20,8 +24,9 @@
 
 
 .monto-total{
-    font-size: 1.5rem;
-    color: #f85;
+    font-size: 1.3rem;
+    color: #e41;
+    padding: 1rem;
 }
 
 .cart-to-products, .cart-to-products:hover{

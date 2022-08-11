@@ -25,16 +25,16 @@ const Navbarr = () => {
           <Nav className="me-auto navbar-content">
             <Link to={"/"} className="nav-section" id="nav-section-products">Productos</Link>
             <NavDropdown title="Géneros" id="nav-section-genres" className="nav-section"> 
-              <Link to={"/category/contemporaneo"} className="dropdown-item">Contemporáneo</Link>
-              <Link to={"/category/tango"} className="dropdown-item">Tango</Link>
-              <Link to={"/category/piano"} className="dropdown-item">Piano</Link>
-              <Link to={"/category/ambiental"} className="dropdown-item">Ambiental</Link>
-              <Link to={"/category/naturaleza"} className="dropdown-item">Naturaleza</Link>
+              <Link to={"/category/acústico"} className="dropdown-item">Acústico</Link>
+              <Link to={"/category/electrónico"} className="dropdown-item">Electrónico</Link>
+              <Link to={"/category/clásico"} className="dropdown-item">Clásico</Link>
+              <Link to={"/category/contemporáneo"} className="dropdown-item">Contemporáneo</Link>
               <Link to={"/category/experimental"} className="dropdown-item">Experimental</Link>
-              <Link to={"/category/minimalista"} className="dropdown-item">Minimalista</Link>
-              <Link to={"/category/clasico"} className="dropdown-item">Clásico</Link>
-              <Link to={"/category/opera"} className="dropdown-item">Ópera</Link>
-              <Link to={"/category/acustico"} className="dropdown-item">Acústico</Link>
+              <Link to={"/category/ambiental"} className="dropdown-item">Ambiental</Link>
+              <Link to={"/category/piano"} className="dropdown-item">Piano</Link>
+              <Link to={"/category/guitarra"} className="dropdown-item">Guitarra</Link>
+              <NavDropdown.Divider />
+                <Link to={"/genres"} id="see-all-genres" className="dropdown-item">Ver todos</Link>
             </NavDropdown>
             <Link to={"/about"} className="nav-section" id="nav-section-about">Sobre Nosotros</Link>
             <Link to={"/contact"} className="nav-section" id="nav-section-contact">Contacto</Link>

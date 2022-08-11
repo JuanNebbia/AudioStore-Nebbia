@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartProvider from './context/CartContext';
 import Navbar from './components/Navbar/Navbar';
+import GenresListContainer from './components/GenresListContainer/GenresListContainer';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/about' element={<About/>} />  
             <Route path='/contact' element={<Contact/>} />
             <Route path='/cart' element={<Cart/>} />
+            <Route path='/genres' element={<GenresListContainer/>} />
           </Routes>
         </CartProvider>
       </BrowserRouter>
