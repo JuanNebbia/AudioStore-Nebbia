@@ -24,21 +24,9 @@ const ItemDetailContainer = () => {
       .finally(setLoading(false))
     },[itemId])
 
-  // useEffect(()=>{
-  //   fetch(`https://62e16660e8ad6b66d848fbe1.mockapi.io/api/products/${itemId}`)
-  //   .then((res) => res.json())
-  //     .then((data)=> setProductDetail(data))
-  //     .catch((err)=> console.log(err))
-  //     .finally(setLoading(false))
-  // },[itemId])
-
-
     return (
         <>
-          { loading ? 
-            <Loader />
-            : <ItemDetail productDetail = {productDetail}/>
-          }
+          { loading ? <Loader />: <ItemDetail productDetail = {productDetail}/> }
         </>
   )
 }
