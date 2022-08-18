@@ -1,0 +1,35 @@
+.artists-list-container{
+    min-height: 100vh;
+}
+
+.artists-list-title{
+    font-size: 1.9rem;
+    text-align: center;
+    margin-top: 3rem;
+    color: #fce5b0;
+}
+
+.artists-list-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 5rem auto;
+    justify-content: center;
+}
+
+.artists-link{
+    font-size: 1.2rem;
+    color: #eee;
+    background-color: #555;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2rem 0.3rem;
+    margin: 0.25rem 0.5rem ;
+    margin-left: 0;
+    text-decoration: none;
+}
+
+.artists-link:hover{
+    color: #eee;
+    background-color: #777;
+}

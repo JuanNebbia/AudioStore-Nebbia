@@ -2,13 +2,20 @@
     padding: 4rem 10%;
     min-height: 100vh;
 }
+
+.cart-item-img{
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
 .cart-title{
     color: #ddd;
     font-weight: 400;
 }
 
 .main-row{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 #item-full-title{
@@ -25,8 +32,6 @@
 
 .monto-total{
     font-size: 1.3rem;
-    color: #e41;
-    padding: 1rem;
 }
 
 .cart-to-products, .cart-to-products:hover{

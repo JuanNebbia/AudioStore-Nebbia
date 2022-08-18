@@ -23,7 +23,8 @@ const Navbarr = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navbar-content">
-            <Link to={"/"} className="nav-section" id="nav-section-products">Productos</Link>
+            <Link to={"/"} className="nav-section" id="nav-section-home">Inicio</Link>
+            <Link to={"/artists"} className="nav-section" id="nav-section-artists">Artistas</Link>
             <NavDropdown title="Géneros" id="nav-section-genres" className="nav-section"> 
               <Link to={"/category/acústico"} className="dropdown-item">Acústico</Link>
               <Link to={"/category/electrónico"} className="dropdown-item">Electrónico</Link>
@@ -31,8 +32,7 @@ const Navbarr = () => {
               <Link to={"/category/contemporáneo"} className="dropdown-item">Contemporáneo</Link>
               <Link to={"/category/experimental"} className="dropdown-item">Experimental</Link>
               <Link to={"/category/ambiental"} className="dropdown-item">Ambiental</Link>
-              <Link to={"/category/piano"} className="dropdown-item">Piano</Link>
-              <Link to={"/category/guitarra"} className="dropdown-item">Guitarra</Link>
+              <Link to={"/category/rock"} className="dropdown-item">Rock</Link>
               <NavDropdown.Divider />
                 <Link to={"/genres"} id="see-all-genres" className="dropdown-item">Ver todos</Link>
             </NavDropdown>

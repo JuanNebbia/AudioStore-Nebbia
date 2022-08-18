@@ -7,32 +7,41 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    const { categoryId } = useParams()
+    const { categoryId, artist } = useParams()
 
     useEffect(()=>{
         const db = getFirestore();
         const itemsCollection = collection(db, "items")
-        if (!categoryId){
-            getDocs(itemsCollection).then((snapshot) => {
-                const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})); 
+        if (categoryId && !artist){
+            const q = query(itemsCollection, where("genres", "array-contains", categoryId));
+            getDocs(q).then((snapshot) => {
+                const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}));
                 setProducts(data)})
                 .catch((err) => console.log(err))
                 .finally(setLoading(false))
-        }else{
-            const q = query(itemsCollection, where("genres", "array-contains", categoryId));
+        }else if(artist){
+            const q = query(itemsCollection, where("artist", "==", artist));
             getDocs(q).then((snapshot) => {
                 const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})); 
                 setProducts(data)})
                 .catch((err) => console.log(err))
                 .finally(setLoading(false))
+        }else{
+            getDocs(itemsCollection)
+            .then((snapshot) => {
+                const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})); 
+                setProducts(data)})
+            .catch((err) => console.log(err))
+            .finally(setLoading(false))
         }
-        },[categoryId])
+        },[categoryId, artist])
 
-
+       
 
     return (
         <div className='item-list-container-container' style={{minHeight: '100vh'}}>
-            { loading ? <Loader /> : <ItemList items = {products} categoryId= {categoryId}/> }
+            { loading ? <Loader /> 
+            : <ItemList items = {products} categoryId= {categoryId} artist={artist}/> }
         </div>
     )
 }

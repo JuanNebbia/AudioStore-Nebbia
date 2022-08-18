@@ -61,7 +61,7 @@ const ItemDetail = ({ productDetail }) => {
                         {purchase? 
                             <div className='btn-cart-container'>
                                 <button className="btn btn-primary" onClick={()=>navigate('/')}>Seguir comprando</button>
-                                <button className="btn btn-success" onClick={()=>navigate('/cart')}>Terminar mi compra</button>
+                                <button className="btn btn-success btn-finish-purchase" onClick={()=>navigate('/cart')}>Terminar mi compra</button>
                             </div>
                         : <ItemCount
                             stock = {stock}
@@ -89,7 +89,7 @@ const ItemDetail = ({ productDetail }) => {
                     <small>cantidad: {count}</small>
                 </Toast.Header>
                 <Toast.Body>Se agregó el item al carrito!</Toast.Body>
-                <button className='btn cancel-btn' onClick={()=>removeItem(id)}>cancelar</button>
+                <button className='btn cancel-btn' onClick={()=>removeItem(id)}>cancelar compra</button>
                 </Toast>
             </Col>
         </Row>

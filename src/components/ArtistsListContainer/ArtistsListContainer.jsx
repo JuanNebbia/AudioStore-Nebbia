@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import GenresList from '../GenresList/GenresList'
+import ArtistsList from '../ArtistsList/ArtistsList'
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
-const GenresListContainer = () => {
-    const [genres, setGenres] = useState([])
+const ArtistsListContainer = () => {
+    const [artists, setArtists] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(()=>{
@@ -11,25 +11,23 @@ const GenresListContainer = () => {
         const itemsCollection = collection(db, "items")
         getDocs(itemsCollection)
         .then((snapshot) => {
+            const artistsList = []
             const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()}) )
-            const genresList = []
             data.forEach(item => {
-                item.genres.forEach(gen =>{
-                    const existingGenre = genresList.some((g)=> g === gen)
-                    if (!existingGenre){
-                        genresList.push(gen)
-                    }
-                })
-            });
-            setGenres(genresList)
+                const existingArtist = artistsList.some((a)=> a === item.artist)
+                if (!existingArtist && item.artist !== 'Anónimo'){
+                    artistsList.push(item.artist)
+                }
             })
+        setArtists(artistsList)
+        })
         .catch((err) => console.log(err))
         .finally(setLoading(false))
-        },[])
+    },[])
 
   return (
-    <GenresList genres={genres} loading={loading} />
+    <ArtistsList artists={artists} loading={loading} />
   )
 }
 
-export default GenresListContainer
+export default ArtistsListContainer

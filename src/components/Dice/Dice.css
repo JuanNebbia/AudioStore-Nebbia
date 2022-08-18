@@ -4,11 +4,11 @@
     top: 1rem;
     margin-top: 1rem;
     margin-left: 1rem;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .dice-icon{
-    color: #fce5b0;
+    color: #ddd;
     font-size: 3rem;
     transition: transform 0.2s;
 }

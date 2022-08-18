@@ -156,7 +156,10 @@ h6{
 
 .btn-cart-container{
     display: flex;
-    justify-content: space-between;
+}
+
+.btn-finish-purchase{
+    margin-left: 1rem;
 }
 
 .demo{
@@ -204,8 +207,8 @@ h6{
 }
 
 .cancel-btn, .cancel-btn:hover{
-    color: #d33;
+    color: #544;
     border: none;
-    font-weight: 700;
+    font-size: 0.9rem;
 }
 
