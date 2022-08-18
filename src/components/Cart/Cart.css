@@ -8,6 +8,8 @@
     width: 3.5rem;
     margin-right: 1rem;
     border-radius: 50%;
+    box-shadow: 0 0 1px #000;
+    cursor: pointer;
 }
 .cart-title{
     color: #ddd;
@@ -39,7 +41,11 @@
     text-decoration: none;
 }
 
-.purchase-button, .clean-button{
+.purchase-button, .cart-to-products{
+    font-size: 1.2rem;
+}
+
+.purchase-button{
     margin-right: 1rem;
 }
 
@@ -47,19 +53,15 @@
     color: #ccc;
 }
 
-.purchase-toast-container{
-    position: fixed;
-    bottom: 5%;
-    right: 3%;
+.clean-button{
+    font-size: 0.8rem;
 }
 
-.purchase-toast-title{
-    font-size: 2rem;
-    color: #3b5;
-    margin: auto;
-}
-
-.purchase-toast-text{
-    font-size: 1rem;
-    text-align: center;
+.remove-button{
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #933;
 }

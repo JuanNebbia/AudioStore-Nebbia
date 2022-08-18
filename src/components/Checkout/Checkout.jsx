@@ -70,14 +70,11 @@ const Checkout = () => {
             </div>
         </div>
     :<div className="thanks-container">
-        <h3 className='thanks-message'>Gracias por comprar con nosotros!</h3>
+        <h3 className='thanks-message'>¡Gracias por comprar con nosotros!</h3>
         <p className='order-id'>Guardá el siguiente código: {orderId}</p>
         <button className='btn btn-primary to-home-btn' onClick={()=>navigate('/')}>Volver al inicio</button>
+    </div>}
     </div>
-        
-    }
-    </div>
-    
   )
 }
 

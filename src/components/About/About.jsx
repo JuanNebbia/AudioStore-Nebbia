@@ -13,7 +13,8 @@ const About = () => {
                 <Card.Title className='about-title'>Quiénes Somos</Card.Title>
                 <div className="about-content">
                     <Card.Text>
-                        AudioStore es desarrollada por Juan Nebbia durante el curso de React en Coderhouse
+                        AudioStore es desarrollada por Juan Nebbia durante 
+                        el curso de React en <a href='https://coderhouse.com' target='!BLANK'>Coderhouse</a>
                     </Card.Text>
                     <Card.Text>
                         En esta plataforma podés conseguir las pistas de audio más originales de la web

@@ -25,9 +25,9 @@ const ItemDetailContainer = () => {
     },[itemId])
 
     return (
-        <>
-          { loading ? <Loader />: <ItemDetail productDetail = {productDetail}/> }
-        </>
+      <div style={{minHeight: '100vh'}}>
+        { loading ? <Loader />: <ItemDetail productDetail = {productDetail}/> }
+      </div>
   )
 }
 

@@ -15,10 +15,6 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  max-height: 100vh;
-  overflow: scroll;
-  /* background-image: linear-gradient(to top, #101018, #9a9aa6); */
-  background-color: #131317;
   position: relative;
   z-index: 100;
 }

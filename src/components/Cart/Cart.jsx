@@ -2,6 +2,9 @@ import React from 'react'
 import './Cart.css'
 import { Table } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
+import { RiCloseLine } from 'react-icons/ri';
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';;
 
 const Cart = ({items}) => {
   const { cart, clear, removeItem, totalPrice } = items
@@ -25,17 +28,33 @@ const Cart = ({items}) => {
           <tbody>
             {cart.map((item)=>
                 <tr key={item.id}>
-                  <td ><img src={item.pictureUrl} className='cart-item-img' alt={item.title} /></td>
+                  <td >
+                    <img src={item.pictureUrl} 
+                    className='cart-item-img' 
+                    alt={item.title} 
+                    onClick={()=>navigate(`/item/${item.id}`)} />
+                  </td>
                   <td id='item-full-title' style={{paddingLeft: '1rem', fontSize: '0.9rem',textAlign:'start'}}>
                     <span className='item-title'>{item.title}</span>
                     <br/>
-                      de {item.artist}
+                      {item.artist}
                   </td>
                   <td>{item.quantity}</td>
                   <td>${item.price}</td>
                   <td>${item.price * item.quantity}</td>
                   <td>
-                    <button className="remove-button btn btn-secondary" onClick={()=>removeItem(item.id)}>Borrar item</button>
+                    <OverlayTrigger
+                      placement="bottom"
+                      overlay={
+                        <Tooltip id="tooltip-bottom">
+                            Descatar Item
+                        </Tooltip>
+                      }
+                    >
+                      <button className="remove-button" onClick={()=>removeItem(item.id)}>
+                        <RiCloseLine />
+                      </button>
+                    </OverlayTrigger>
                   </td>
                 </tr>
             )}
@@ -64,7 +83,7 @@ const Cart = ({items}) => {
        : <div className='no-cart'>
           <p className='empty-cart-text'>El carrito está vacío</p>
           <button className='btn btn-primary'>
-            <Link to={'/'} className="cart-to-products">Ir a los productos</Link>
+            <Link to={'/'} className="cart-to-products">Volver al inicio</Link>
           </button>
         </div>
       } 

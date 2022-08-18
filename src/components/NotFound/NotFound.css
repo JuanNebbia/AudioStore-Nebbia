@@ -1,0 +1,16 @@
+.not-found-container{
+    min-height: 100vh;
+    padding: 3rem;
+}
+
+.not-found-title{
+    font-size: 4rem;
+    color: #eee;
+    text-align: center;
+}
+
+.not-found-text{
+    margin-top: 2rem;
+    color: #eee;
+    text-align: center;
+}

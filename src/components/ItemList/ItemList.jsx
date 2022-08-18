@@ -1,6 +1,7 @@
 import React from 'react'
 import Dice from '../Dice/Dice'
 import Item from '../Item/Item'
+import NotFound from '../NotFound/NotFound'
 import './ItemList.css'
 
 const ItemList = ({ items, categoryId, artist}) => {
@@ -15,7 +16,7 @@ const ItemList = ({ items, categoryId, artist}) => {
             <div className='item-list-titles'>
               <div className="titles">
                 <h2 className='item-list-title'>¡Bienvenid@ a AudioStore!</h2>
-                <h4 className="item-list-subtitle">Qué vas a escuchar hoy?</h4>
+                <h4 className="item-list-subtitle">¿Qué vas a escuchar hoy?</h4>
               </div>
             </div>
             }
@@ -23,11 +24,9 @@ const ItemList = ({ items, categoryId, artist}) => {
             {items.map((item)=><Item key={item.id} product={item} />)}
           </div>
         </div>
-        :<p className='not-found'>¡Ups! parece que tu búsqueda no arrojó ningún resultado</p>
+        :<NotFound />
     }
     </>
-    
-    
   )
 }
 

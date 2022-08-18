@@ -7,11 +7,11 @@
     margin: 1.5rem 0.5rem;
     border: none;
     background-color: #0b0b11;
+    cursor: pointer;
 }
 
 .item-card:hover {
     box-shadow: 0 0 8px #000;
-    cursor: pointer;
     background-color: #202026;
 }
 
@@ -23,12 +23,10 @@
     display: flex;
     margin: 1.5rem 0.5rem;
     border: none;
-    background-color: #202020
-}
-
-.item-card-disabled:hover{
+    background-color: #151516;
     cursor: pointer;
 }
+
 
 .item-card-disabled:hover  #agotado{
     animation: shake 0.15s;
