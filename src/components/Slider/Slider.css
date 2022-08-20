@@ -1,0 +1,11 @@
+span.carousel-control-next-icon, span.carousel-control-prev-icon, div.carousel-indicators{
+    display: none;
+}
+
+@media (max-width: 991px) {    
+    .carousel-item{
+        width: 140%;
+        margin-left: -20%;
+    }
+
+}

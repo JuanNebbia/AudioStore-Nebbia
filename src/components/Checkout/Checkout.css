@@ -21,8 +21,15 @@ label{
 .checkout-text{
     color: #eee;
     text-align: center;
-    
 }
+
+.checkout-table{
+    min-width: 60%;
+    width: fit-content;
+    margin: 5rem auto;
+    font-size: 0.8rem;
+}
+
 
 .thanks-container{
     display: flex;
@@ -33,3 +40,4 @@ label{
     width: fit-content;
     margin: 3rem auto;
 }
+

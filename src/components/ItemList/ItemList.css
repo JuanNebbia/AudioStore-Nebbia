@@ -1,5 +1,5 @@
 .item-list-body{
-  padding: 1rem 0 10rem;
+  padding-bottom:10rem;
 }
 
 .category-title{
@@ -11,7 +11,7 @@
 
 .item-list{
   margin: 0 1rem;
-  padding: 1.5rem 7% 1rem;
+  padding: 0 7% 1rem;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -79,6 +79,6 @@
 
 @media (max-width: 991px){
   .item-list{
-    padding: 1.5rem 2%;
+    padding: 0 2%;
   }
 }

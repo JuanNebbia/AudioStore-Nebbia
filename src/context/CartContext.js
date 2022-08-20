@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react'
-import UseLocalStorage from './UseLocalStorage'
+import React, { createContext } from 'react'
+import UseLocalStorage from '../localStorage/UseLocalStorage'
 
 export const CartContext = createContext([])
 
@@ -50,3 +50,5 @@ const CartProvider = ({children}) =>{
 }
 
 export default CartProvider
+
+

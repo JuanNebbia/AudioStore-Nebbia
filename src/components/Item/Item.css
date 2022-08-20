@@ -28,7 +28,7 @@
 }
 
 
-.item-card-disabled:hover  #agotado{
+.item-card-disabled:hover  #sold-out{
     animation: shake 0.15s;
 }
 

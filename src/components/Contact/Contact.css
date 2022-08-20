@@ -1,46 +1,93 @@
-.contact-background{
+.contact{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.contact-background-container{
+    width: 100vw;
+    height: 120vh;
     position: absolute;
-    filter: brightness(0.5) grayscale(0.3);
+    overflow: hidden;
+    margin: 0;
+}
+
+.contact-background{
     object-fit: cover;
-    width: 99.4vw;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    filter: grayscale(0.2) blur(0.2rem) brightness(0.7);
 }
 
 .contact-card{
-    position: relative;
-    padding: 4rem;
+    width: 30rem;
+    border: none;
+    align-self: center;
+    box-shadow: none;
+    border-radius: 0;
 }
 
-.contact-title{
-    color: #fce5b0;
+.contact-img{
+    filter: grayscale(0.2) brightness(0.6);
+
+}
+
+.contact-overlay{
+    padding: 8% 0;
     text-align: center;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    text-shadow: 0 0 5px black;
-}
-
-.contact-content{
-    background-color: #000c;
     display: flex;
-    padding: 3rem;
     flex-direction: column;
     align-items: center;
 }
 
-.contact-net{
-    font-size: 1.2rem;
-    margin: 0;
-    font-weight: bold;
-    color: #dd8b00;
+.contact-title{
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 4px black;
+}
+
+.contact-content{
+    color: #fff;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 0.85rem;
+    text-shadow: 0 0 4px black;
 }
 
 .contact-link{
     color: #bbb;
     margin-bottom: 2.5rem;
+    margin-left: 1rem;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .contact-link:hover{
     color: #fff;
 }
 
+
+
+@media (max-width: 991px) {
+
+    .contact-background{
+        filter: brightness(0.2);
+    }
+
+    .contact-card{
+        margin: 3rem 1rem;
+        align-self: flex-start;
+    }
+
+    .contact-img{
+        display: none;
+    }
+    .contact-title{
+        margin-bottom: 2rem;
+    }
+
+}
