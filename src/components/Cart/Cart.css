@@ -3,6 +3,12 @@
     min-height: 100vh;
 }
 
+.cart-table{
+    text-align:center;
+}
+
+
+
 .cart-item-img{
     height: 3.5rem;
     width: 3.5rem;
@@ -17,12 +23,15 @@
 }
 
 .main-row{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 #item-full-title{
     color: #444;
     font-size: 0.9rem;
+    padding:0; 
+    font-size: 0.9rem;
+    text-align: start
 }
 
 .item-title{
@@ -33,20 +42,18 @@
 
 
 .monto-total{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .cart-to-products, .cart-to-products:hover{
     color: #fff;
     text-decoration: none;
-}
-
-.purchase-button, .cart-to-products{
     font-size: 1.2rem;
 }
 
 .purchase-button{
     margin-right: 1rem;
+    font-size: 1.2rem;
 }
 
 .empty-cart-text{
@@ -64,4 +71,48 @@
     padding: 0;
     margin: 0;
     color: #933;
+}
+
+@media (max-width: 991px){
+    .cart-container{
+        padding: 4rem 2%;
+    }
+
+    .main-row > th{
+        padding: 0.5rem 0;
+    }
+    .main-row {
+        font-size: 0.6rem;
+    }
+
+    .cart-item-img{
+        display: none;
+    }
+
+    #item-full-title{
+        color: #444;
+        font-size: 0.7rem;
+    }
+    
+    .item-title{
+        font-size: 0.9rem;
+        color: #000;
+        margin-right: 0.3rem;
+    }
+    #item-quantity, #item-price, #item-subtotal{
+        font-size: 0.8rem;
+    }
+
+    .monto-total{
+        font-size: 1rem;
+    }
+
+    .clean-button{
+        font-size: 0.7rem;
+    }
+
+    .cart-to-products, .purchase-button{
+        font-size: 0.9rem;
+    }
+    
 }

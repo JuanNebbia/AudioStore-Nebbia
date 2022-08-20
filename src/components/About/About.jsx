@@ -6,7 +6,9 @@ import AboutImg from '../../img/about.png'
 const About = () => {
   return (
     <div className='about'>
-        <img src={AboutBackground} alt="" className="about-background" />
+        <div className="about-background-container">
+            <img src={AboutBackground} alt="" className="about-background" />
+        </div>
         <Card className="about-card">
             <Card.Img src={AboutImg} alt="Card image" className="about-img"/>
             <Card.ImgOverlay className="about-overlay">

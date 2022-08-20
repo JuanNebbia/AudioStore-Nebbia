@@ -8,6 +8,7 @@
     justify-content: center;
     position: relative;
     z-index: 2000;
+    padding: 2rem;
 }
 
 .footer-text{
@@ -18,4 +19,8 @@
 .footer-links{
     font-size: 0.8rem;
 
+}
+
+a {
+    text-decoration: none;
 }

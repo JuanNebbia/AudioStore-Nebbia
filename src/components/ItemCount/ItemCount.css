@@ -1,7 +1,6 @@
 .contador-container{
-    display: inline-flex;
-    margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .btn-resta{
@@ -67,6 +66,7 @@
 .warning-container{
     display: inline-flex;
     justify-content: center;
+    margin: 0.3rem auto
 }
 
 
@@ -83,7 +83,7 @@
     border: none;
     color: #fff;
     border-radius: 10px;
-    width: 50%;
+    width: fit-content
 }
 
 .btn-add:hover{
@@ -92,3 +92,19 @@
 }
 
 
+@media (max-width: 991px) {
+
+    .item-count-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contador-container{
+        margin: auto
+    }
+
+    .btn-add{
+        margin: auto;
+    }
+
+}

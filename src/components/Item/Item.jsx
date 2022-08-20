@@ -18,15 +18,14 @@ const Item = ({ product }) => {
         <Card.Body className="item-card-body">
             <Card.Title className='item-card-title'>{title}</Card.Title>
             <Card.Text className='item-card-text'>{artist}</Card.Text>
-            {stock === 0 && <Badge bg="danger" id="agotado" style={{width: 'fit-content', margin:'auto', padding:'0.2rem 1rem'}}>Agotado</Badge>}
-            {stock === 1 && <Badge bg="primary" style={{width: 'fit-content', margin:'auto', padding:'0.2rem 1rem'}}>Último disponible</Badge>}
+            {stock === 0 && <Badge bg="danger" id="sold-out">Agotado</Badge>}
+            {stock === 1 && <Badge bg="primary" id="last-available">Último disponible</Badge>}
             <footer className='card-footer'>
                 <p className='text-muted text-footer'>Este producto incluye 
                     <span className='length'> {tracks.length}</span> {tracks.length === 1 ? 'pista' : 'pistas'}
                 </p>
             </footer>
         </Card.Body>
-       
     </Card>
   );
 }

@@ -5,12 +5,19 @@
     align-items: center;
 }
 
-.about-background{
-    position: absolute;
-    top: 0;
-    left:-1rem;
-    object-fit: cover;
+.about-background-container{
     width: 100vw;
+    height: 150vh;
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+}
+
+.about-background{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
     filter: grayscale(0.3) blur(0.4rem) brightness(0.3);
 }
 
@@ -48,4 +55,28 @@
     margin-bottom: auto;
     font-size: 0.85rem;
     text-shadow: 0 0 4px black;
+}
+
+@media (max-width: 991px) {
+
+    .about-background{
+        filter: brightness(0.2);
+    }
+
+    .about-card{
+        margin: 3rem 1rem;
+        align-self: flex-start;
+    }
+
+    .about-img{
+        display: none;
+    }
+    .about-title{
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-content{
+        width: 60%;
+    }
 }

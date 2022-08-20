@@ -20,7 +20,7 @@ const ItemCount = ({ stock, onAdd, count, setCount}) =>{
         <div className="item-count-container">
             <div className='contador-container'>
                 <button onClick={restar} disabled={count<=1} className='btn-resta'>-</button>
-                <p className='contador'>{stock > 0 ? count : '0'}</p>
+                <div className='contador'>{stock > 0 ? count : '0'}</div>
                 <button onClick={sumar} disabled={count>=stock} className='btn-suma'>+</button>
             </div>
             <div className="warning-container">

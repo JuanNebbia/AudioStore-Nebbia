@@ -33,3 +33,9 @@
     color: #eee;
     background-color: #777;
 }
+
+@media (max-width: 991px){
+    .genres-list-box{
+        width: 90%;
+    }
+}

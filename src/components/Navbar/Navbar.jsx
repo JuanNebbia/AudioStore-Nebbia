@@ -14,13 +14,13 @@ const Navbarr = () => {
 
   return (
     <Navbar expand="lg" className="navbar" variant="dark">
-      <Container>
+      <Container style={{backgroundColor: '#0a0a0f'}}> 
         <Navbar.Brand>
             <Link to={'./'}>
               <img src={Logo} alt='logo' className='logo-navbar' />
             </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav"  />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navbar-content">
             <Link to={"/"} className="nav-section" id="nav-section-home">Inicio</Link>

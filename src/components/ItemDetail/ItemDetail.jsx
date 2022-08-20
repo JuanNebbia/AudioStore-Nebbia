@@ -33,12 +33,12 @@ const ItemDetail = ({ productDetail }) => {
             </div>
             <div className='item-detail-card' >
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 main-column">
                         <div className="detail-img-container">
                             <img src={pictureUrl} alt={title} title={title} className="detail-img" /> 
                         </div>
                     </div>
-                    <div className="col-lg-6 titles">
+                    <div className="col-lg-6 main-column titles">
                         <div className="genres-container">
                             {genres?.map((genre, i)=><Link to={`/category/${genre}`} className="genres" key={i}>{genre}</Link>)}
                         </div>
@@ -48,7 +48,7 @@ const ItemDetail = ({ productDetail }) => {
                         <p className='price-tag'>$ {price}</p>
                     </div>
                     <div className="row">
-                        <div className="col-lg-6 track-list">
+                        <div className="col-lg-6 main-column track-list">
                             <h6>Contenido</h6>
                                 <ol>
                                     {tracks !==undefined && tracks.map((track,i)=>
@@ -59,10 +59,10 @@ const ItemDetail = ({ productDetail }) => {
                                     }
                             </ol>
                         </div>
-                        <div className="col-lg-6 buy-section">
+                        <div className="col-lg-6 main-column buy-section">
                             {purchase? 
                                 <div className='btn-cart-container'>
-                                    <button className="btn btn-primary" onClick={()=>navigate('/')}>Seguir comprando</button>
+                                    <button className="btn btn-primary btn-keep-buying" onClick={()=>navigate('/')}>Seguir comprando</button>
                                     <button className="btn btn-success btn-finish-purchase" onClick={()=>navigate('/cart')}>Ir al carrito</button>
                                 </div>
                             : <ItemCount

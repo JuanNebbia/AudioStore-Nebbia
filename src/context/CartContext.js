@@ -1,9 +1,12 @@
 import React, { createContext, useState } from 'react'
+import UseLocalStorage from './UseLocalStorage'
 
 export const CartContext = createContext([])
 
 const CartProvider = ({children}) =>{
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = UseLocalStorage('cart', [])
+
+    console.log(cart)
 
     const addItem = (productDetail, quantityToAdd) => {
         const itemInCart = cart.some((item)=> item.id === productDetail.id)

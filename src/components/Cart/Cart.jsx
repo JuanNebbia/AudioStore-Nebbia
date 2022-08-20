@@ -15,7 +15,7 @@ const Cart = ({items}) => {
       <h2 className='cart-title'>Carrito</h2>
       {cart.length > 0? 
       <div>
-        <Table responsive="xl" striped borderless variant="secondary" className='cart-table align-middle' style={{textAlign:'center'}}>
+        <Table responsive="xl" striped borderless variant="secondary" className='cart-table align-middle'>
           <thead>
             <tr className='main-row'>
               <th scope='col' colSpan={2} style={{paddingLeft: '1rem'}}>Item</th>
@@ -34,14 +34,14 @@ const Cart = ({items}) => {
                     alt={item.title} 
                     onClick={()=>navigate(`/item/${item.id}`)} />
                   </td>
-                  <td id='item-full-title' style={{paddingLeft: '1rem', fontSize: '0.9rem',textAlign:'start'}}>
+                  <td id='item-full-title'>
                     <span className='item-title'>{item.title}</span>
                     <br/>
                       {item.artist}
                   </td>
-                  <td>{item.quantity}</td>
-                  <td>${item.price}</td>
-                  <td>${item.price * item.quantity}</td>
+                  <td id='item-quantity'>{item.quantity}</td>
+                  <td id='item-price'>${item.price}</td>
+                  <td id='item-subtotal'>${item.price * item.quantity}</td>
                   <td>
                     <OverlayTrigger
                       placement="bottom"
@@ -61,7 +61,7 @@ const Cart = ({items}) => {
             <tr> 
               <td colSpan={2}
                 className='monto-total'
-                style={{padding:'2rem'}}>
+                style={{padding:'1rem'}}>
                 Monto total
               </td>
               <td colSpan={3} className='monto-total'>

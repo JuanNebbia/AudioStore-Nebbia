@@ -65,6 +65,7 @@
     transform: scale(1.03);
 }
 
+
 .item-card-title{
     color: #eee;
     text-align: center;
@@ -126,4 +127,49 @@
 .length{
     color: #fff;
     font-weight: 500
+}
+
+#sold-out, #last-available{
+    font-size: 0.8rem;
+    width: fit-content;
+    margin: 0 auto 0.5rem; 
+    padding: 0.2rem 1rem
+}
+
+@media (max-width: 991px) {
+    .item-card, .item-card-disabled{
+        width: 12rem;
+        min-height: 17rem;
+        margin: 1rem 0.5rem;
+    }
+
+    .img-container{
+        height: 8rem;
+    }
+
+    .item-card-title{
+        font-size: 1rem;
+    }
+
+    .item-card-body{
+        padding: 1rem 0.5rem;
+    }
+
+    .item-card-text{
+        text-align: center;
+        color: #aaa;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-footer{
+        font-size: 0.7rem;
+        display: block;
+        padding: 0.5rem;
+    }
+
+    #sold-out, #last-available{
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem
+    }
 }

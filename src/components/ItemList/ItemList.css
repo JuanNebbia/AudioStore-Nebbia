@@ -76,3 +76,9 @@
 .item-list::-webkit-scrollbar-corner{
   background-color: #232327;
 }
+
+@media (max-width: 991px){
+  .item-list{
+    padding: 1.5rem 2%;
+  }
+}
