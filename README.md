@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Deploy
+This app has been deployed via [Vercel](https://vercel.com/).
+You can see the final result [here](https://audio-store-nebbia.vercel.app/)
+
 ## Context
 AudioStore was developed as final project for Coderhouse course React Js.
 It works as an e-commerce that offers a wide variety of musical content. 
@@ -12,6 +16,8 @@ It works as an e-commerce that offers a wide variety of musical content.
 - Item Detail
 - Select random item (dice icon)
 - Genres and artist filters
+- About Us
+- Contact
 - Cart view
 - Checkout 
 
@@ -41,4 +47,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-
+## Feedback
+Please send your feedback to juan.nebbia@gmail.com
