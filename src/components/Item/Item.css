@@ -122,6 +122,7 @@
 
 .text-footer{
     margin: 0.15rem;
+    text-align: center;
 }
 
 .length{
@@ -138,9 +139,9 @@
 
 @media (max-width: 991px) {
     .item-card, .item-card-disabled{
-        width: 12rem;
+        width: 10rem;
         min-height: 17rem;
-        margin: 1rem 0.5rem;
+        margin: 2.2rem 0.2rem 0;
     }
 
     .img-container{
@@ -151,8 +152,12 @@
         filter: brightness(0.9) grayscale(0.2);
     }
 
+    .item-card-disabled .card-img-top{
+        filter: brightness(0.5) grayscale(0.4);
+    }
+
     .item-card-title{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .item-card-body{
@@ -162,18 +167,22 @@
     .item-card-text{
         text-align: center;
         color: #aaa;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         margin-bottom: 0.5rem;
     }
 
     .card-footer{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         display: block;
-        padding: 0.5rem;
+        padding: 0.2rem;
+    }
+
+    .text-footer{
+        margin: 0
     }
 
     #sold-out, #last-available{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         padding: 0.2rem 0.5rem
     }
 }

@@ -14,7 +14,7 @@ const Navbarr = () => {
 
   return (
     <Navbar expand="lg" className="navbar" variant="dark">
-      <Container style={{backgroundColor: '#0a0a0f'}}> 
+      <Container style={{backgroundColor: '#0a0a0fee'}}> 
         <Navbar.Brand>
             <Link to={'./'}>
               <img src={Logo} alt='logo' className='logo-navbar' />

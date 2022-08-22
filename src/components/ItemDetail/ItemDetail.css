@@ -221,7 +221,7 @@ h6{
     .item-detail-card{
         margin: 1rem auto;
         width: 90%;
-        padding: 3rem 0;
+        padding: 1rem 0;
         position: relative;
         display: row;
         border-radius: 1rem;
@@ -233,14 +233,15 @@ h6{
     }
 
     .detail-img-container{
-        max-height: 15rem;
-        max-width: 15rem;
+        max-height: 17rem;
+        max-width: 17rem;
         margin: auto;
     }
 
     .detail-title{
         font-size: 1.7rem;
         margin: auto;
+        text-align: center;
     }
 
     .detail-artist{

@@ -15,11 +15,12 @@
     align-items: center;
 }
 
+
 .nav-section{
     font-size: 1.2rem;
     margin: 1rem;
     color: #fce5b0;
-    font-weight: 400;
+    font-weight: 600;
     border-radius: 15px;
     text-decoration: none;
 }
@@ -67,4 +68,5 @@
     .navbar{
         padding: 0;
     }
+
 }

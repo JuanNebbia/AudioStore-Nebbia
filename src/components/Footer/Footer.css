@@ -25,3 +25,17 @@
 a {
     text-decoration: none;
 }
+
+
+@media (max-width: 991px) {
+    .footer-text{
+        margin-bottom: 0.5rem;
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    
+    .footer-links{
+        font-size: 0.6rem;
+    
+    }
+}
