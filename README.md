@@ -10,10 +10,10 @@ It works as an e-commerce that offers a wide variety of musical content.
 
 - Item List
 - Item Detail
-- Cart view
 - Select random item (dice icon)
 - Genres and artist filters
-- Purchase checkout 
+- Cart view
+- Checkout 
 
 ![](/src/img/flowdemonstration.gif "flow demonstration")
 

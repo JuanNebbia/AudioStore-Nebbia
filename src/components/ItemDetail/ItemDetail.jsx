@@ -18,9 +18,17 @@ const ItemDetail = ({ productDetail }) => {
     const navigate = useNavigate()
     const {addItem, removeItem} = useContext(CartContext)
 
+    const orderItem = {
+        title: productDetail.title,
+        artist: productDetail.artist,
+        pictureUrl: productDetail.pictureUrl,
+        price: productDetail.price,
+        id: productDetail.id
+    }
+
     const onAdd = (quantityToAdd) =>{
         setCount(quantityToAdd)
-        addItem(productDetail, quantityToAdd)
+        addItem(orderItem, quantityToAdd)
         setPurchase(true)
         setShow(true)
     }

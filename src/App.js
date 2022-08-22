@@ -12,6 +12,7 @@ import Footer from './components/Footer/Footer';
 import CartContainer from './components/CartContainer/CartContainer';
 import Checkout from './components/Checkout/Checkout';
 import ArtistsListContainer from './components/ArtistsListContainer/ArtistsListContainer';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path='/genres' element={<GenresListContainer />} />
             <Route path='/artists' element={<ArtistsListContainer />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
           <Footer />
         </CartProvider>

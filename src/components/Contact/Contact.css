@@ -19,7 +19,7 @@
     height: 100%;
     width: 100%;
     margin: 0;
-    filter: grayscale(0.2) blur(0.2rem) brightness(0.7);
+    filter: grayscale(0.2) blur(0.2rem);
 }
 
 .contact-card{
@@ -31,7 +31,7 @@
 }
 
 .contact-img{
-    filter: grayscale(0.2) brightness(0.6);
+    filter: grayscale(0.2) brightness(0.5);
 
 }
 
@@ -59,9 +59,7 @@
 }
 
 .contact-link{
-    color: #bbb;
-    margin-bottom: 2.5rem;
-    margin-left: 1rem;
+    color: #ddd;
     text-decoration: none;
     font-size: 1.5rem;
 }
