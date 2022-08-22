@@ -147,6 +147,10 @@
         height: 8rem;
     }
 
+    .card-img-top{
+        filter: brightness(0.9) grayscale(0.2);
+    }
+
     .item-card-title{
         font-size: 1rem;
     }

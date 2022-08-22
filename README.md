@@ -33,7 +33,7 @@ It works as an e-commerce that offers a wide variety of musical content.
 
 ## Styles
 Styled with Bootstrap and React-Bootstrap, in addition to css.
-Most of the images and the logo were created using [Midjourney](https://www.midjourney.com/)
+Most of the images and the logo were created using [Midjourney](https://www.midjourney.com/).
 
 ## Available Scripts
 
