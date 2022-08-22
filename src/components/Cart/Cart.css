@@ -111,7 +111,7 @@
         font-size: 0.7rem;
     }
 
-    .cart-to-products, .purchase-button{
+    .cart-to-products, .cart-to-products:hover, .purchase-button{
         font-size: 0.9rem;
     }
     
