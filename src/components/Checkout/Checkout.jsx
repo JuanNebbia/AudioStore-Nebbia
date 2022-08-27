@@ -47,7 +47,7 @@ const Checkout = () => {
                   setOrderId(id)
                 })
                 .catch((error)=> console.error(error))
-                .finally(clear())
+                .finally(()=>clear())
         }
     }
 

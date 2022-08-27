@@ -22,7 +22,7 @@ const ArtistsListContainer = () => {
         setArtists(artistsList)
         })
         .catch((err) => console.log(err))
-        .finally(setLoading(false))
+        .finally(()=>setLoading(false))
     },[])
 
   return (

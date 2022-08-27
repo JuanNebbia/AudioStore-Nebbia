@@ -32,7 +32,7 @@ const ItemListContainer = () => {
                 const data = snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})); 
                 setProducts(data)})
             .catch((err) => console.log(err))
-            .finally(setLoading(false))
+            .finally(()=>setLoading(false))
         }
         },[categoryId, artist])
 
