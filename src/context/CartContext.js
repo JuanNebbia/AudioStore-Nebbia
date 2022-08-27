@@ -1,10 +1,10 @@
 import React, { createContext } from 'react'
-import UseLocalStorage from '../localStorage/useLocalStorage'
+import useLocalStorage from '../localStorage/useLocalStorage'
 
 export const CartContext = createContext([])
 
 const CartProvider = ({children}) =>{
-    const [cart, setCart] = UseLocalStorage('cart', [])
+    const [cart, setCart] = useLocalStorage('cart', [])
 
     const addItem = (productDetail, quantityToAdd) => {
         const itemInCart = cart.some((item)=> item.id === productDetail.id)
@@ -13,7 +13,7 @@ const CartProvider = ({children}) =>{
                 if(item.id === productDetail.id){
                     return {...item, quantity: item.quantity + quantityToAdd}
                 }
-                return item
+            return item
             })
             setCart(updatedCart)
         }else{
